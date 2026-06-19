@@ -797,7 +797,7 @@ manufacturing.
 
   <div className="flex items-center gap-3 flex-wrap max-w-full">
     <a
-      href="/contact"
+      href="/#contact-form"
       className="h-[52px] min-w-[145px] px-5 bg-black text-white uppercase text-[10px] tracking-[0.12em] font-bold flex items-center justify-center gap-2 transition hover:-translate-y-1 hover:bg-[#c86b32] duration-300"
     >
       Contact

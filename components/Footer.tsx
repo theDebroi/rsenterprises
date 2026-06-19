@@ -5,17 +5,16 @@ import Link from "next/link";
 
 const navigationLinks = [
   { name: "About", href: "/#about" },
-  { name: "Products", href: "/#products" },
   { name: "Quality", href: "/#quality" },
   { name: "Catalogue", href: "/#catalogue" },
-  { name: "Contact", href: "/contact" },
+  { name: "Contact", href: "/#contact-form" },
 ];
 
 const productLinks = [
-  { name: "Elastic Tape", href: "/products/elastic-tape" },
-  { name: "Webbing Tape", href: "/products/webbing-tape" },
-  { name: "Jacquard Elastic", href: "/products/jacquard-elastic" },
-  { name: "Custom Solutions", href: "/products/custom-solutions" },
+  { name: "Elastic Tape", href: "/#catalogue" },
+  { name: "Webbing Tape", href: "/#catalogue" },
+  { name: "Jacquard Elastic", href: "/#catalogue" },
+  { name: "Custom Solutions", href: "/#catalogue" },
 ];
 
 export default function Footer() {

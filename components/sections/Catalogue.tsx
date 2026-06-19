@@ -85,75 +85,50 @@ export default function CatalogSection() {
             >
               <div>
                 {/* IMAGE */}
-                <Link href={`/products/${item.slug}`} className="block">
-                  <div
+                <div
+                  className="
+                    relative
+                    aspect-square
+                    overflow-hidden
+                    bg-zinc-200
+                    transition-all
+                    duration-700
+                    group-hover:-translate-y-4
+                    group-hover:shadow-xl
+                  "
+                >
+                  <Image
+                    src={item.img}
+                    alt={item.name}
+                    fill
+                    sizes="25vw"
                     className="
-                      relative
-                      aspect-square
-                      overflow-hidden
-                      bg-zinc-200
+                      object-cover
+                      grayscale
                       transition-all
                       duration-700
-                      group-hover:-translate-y-4
-                      group-hover:shadow-xl
+                      group-hover:scale-110
+                      group-hover:grayscale-0
                     "
-                  >
-                    <Image
-                      src={item.img}
-                      alt={item.name}
-                      fill
-                      sizes="25vw"
-                      className="
-                        object-cover
-                        grayscale
-                        transition-all
-                        duration-700
-                        group-hover:scale-110
-                        group-hover:grayscale-0
-                      "
-                    />
-                  </div>
-                </Link>
+                  />
+                </div>
 
                 {/* TEXT */}
                 <div className="mt-10 text-center">
-                  <Link href={`/products/${item.slug}`} className="hover:text-[#C86B32] transition-colors duration-300">
-                    <h3
-                      className="
-                        font-fjalla
-                        text-4xl
-                        uppercase
-                      "
-                    >
-                      {item.name}
-                    </h3>
-                  </Link>
+                  <h3
+                    className="
+                      font-fjalla
+                      text-4xl
+                      uppercase
+                    "
+                  >
+                    {item.name}
+                  </h3>
                 </div>
               </div>
 
               {/* CTAS */}
-              <div className="mt-10 space-y-3">
-                <Link
-                  href={`/products/${item.slug}`}
-                  className="
-                    w-full
-                    h-[56px]
-                    border
-                    border-black
-                    uppercase
-                    tracking-[0.2em]
-                    text-[10px]
-                    font-bold
-                    flex items-center justify-center
-                    transition
-                    duration-500
-                    hover:bg-black
-                    hover:text-white
-                  "
-                >
-                  Explore Range
-                </Link>
-
+              <div className="mt-10">
                 <a
                   href={waUrl}
                   target="_blank"

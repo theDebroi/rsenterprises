@@ -2,23 +2,23 @@
 
 import dynamic from "next/dynamic";
 
-import CustomCursor from "@/components/CustomCursor";
-import SmoothScroll from "@/components/SmoothScroll";
+import CustomCursor from "../components/CustomCursor";
+import SmoothScroll from "../components/SmoothScroll";
 
-import Navbar from "@/components/NavBar";
+import Navbar from "../components/NavBar";
 
-import AboutSection from "@/components/sections/About";
-import CatalogSection from "@/components/sections/Catalogue";
-import QualitySection from "@/components/sections/Quality";
-import ManufacturingSection from "@/components/sections/Manufacturing";
-import ContactCTA from "@/components/sections/Contact";
+import AboutSection from "../components/sections/About";
+import CatalogSection from "../components/sections/Catalogue";
+import QualitySection from "../components/sections/Quality";
+import ManufacturingSection from "../components/sections/Manufacturing";
+import ContactCTA from "../components/sections/Contact";
 
-import Footer from "@/components/Footer";
+import Footer from "../components/Footer";
 
 // HERO CLIENT IMPORT
 
 const HeroSection = dynamic(
-  () => import("@/components/HeroSection"),
+  () => import("../components/HeroSection"),
   {
     ssr:false,
   }
@@ -26,7 +26,7 @@ const HeroSection = dynamic(
 
 // GLOBAL REACH CLIENT IMPORT
 const GlobalReach = dynamic(
-  () => import("@/components/sections/GlobalPresence"),
+  () => import("../components/sections/GlobalPresence"),
   {
     ssr:false,
   }

@@ -1,357 +1,263 @@
 "use client";
 
-import React from "react";
-import { motion } from "framer-motion";
-import { Fjalla_One } from "next/font/google";
-import {
-  Send,
-  Mail,
-  Phone,
-  MapPin,
-  Briefcase,
-} from "lucide-react";
-
-
-const fjalla = Fjalla_One({
-  weight:"400",
-  subsets:["latin"],
-});
-
-
-export default function ContactCTA(){
-
-return(
-
-<section
-className="
-w-full
-bg-[#F5F5F7]
-px-8
-lg:px-24
-py-40
-text-[#080808]
-"
->
-
-
-<div
-className="
-max-w-[1500px]
-mx-auto
-
-grid
-grid-cols-1
-lg:grid-cols-[35%_65%]
-
-gap-24
-items-start
-"
->
-
-
-
-
-{/* LEFT */}
-
-
-<div>
-
-
-<h2
-className={`
-${fjalla.className}
-
-text-7xl
-uppercase
-mb-12
-`}
->
-LET'S CHAT
-</h2>
-
-
-<p
-className="
-text-xl
-leading-10
-text-black/50
-max-w-lg
-"
->
-Have custom elastic tape requirements or specific
-webbing specifications? Send your details and our
-manufacturing team will connect within 24 hours.
-</p>
-
-
-
-<div
-className="
-mt-14
-pt-10
-border-t
-border-black/10
-space-y-8
-"
->
-
-
-{[
-[Mail,"General Inquiry","info@rsenterprise.com"],
-[Briefcase,"Partnership","partners@rsenterprise.com"],
-[Phone,"Call Operations","+91 98370 50515"],
-[MapPin,"Corporate HQ","Agra, Uttar Pradesh"],
-].map(([Icon,title,text]:any)=>(
-
-<div
-key={title}
-className="
-flex
-gap-5
-items-start
-"
->
-
-<Icon
-size={22}
-className="text-[#C86B32]"
-/>
-
-<div>
-
-<h4 className="font-semibold">
-{title}
-</h4>
-
-<p className="text-black/50">
-{text}
-</p>
-
-</div>
-
-</div>
-
-))}
-
-
-</div>
-
-
-</div>
-
-
-
-
-
-
-
-
-
-{/* RIGHT CARD */}
-
-
-<motion.form
-
-initial={{
-opacity:0,
-y:50
-}}
-
-whileInView={{
-opacity:1,
-y:0
-}}
-
-transition={{
-duration:1
-}}
-
-viewport={{
-once:true
-}}
-
-
-className="
-bg-white
-
-rounded-[36px]
-
-shadow-xl
-shadow-black/5
-
-border
-border-black/5
-
-
-p-12
-lg:p-16
-
-
-space-y-10
-"
->
-
-
-
-
-
-<div
-className="
-grid
-grid-cols-1
-md:grid-cols-2
-gap-8
-"
->
-
-
-<input
-placeholder="Your Name"
-className="h-16 rounded-2xl bg-[#F5F5F7] px-6 outline-none border border-black/10"
-/>
-
-
-<input
-placeholder="Corporate Email"
-className="h-16 rounded-2xl bg-[#F5F5F7] px-6 outline-none border border-black/10"
-/>
-
-
-</div>
-
-
-
-
-
-<div
-className="
-grid
-grid-cols-1
-md:grid-cols-2
-gap-8
-"
->
-
-
-<input
-placeholder="Company Name"
-className="h-16 rounded-2xl bg-[#F5F5F7] px-6 outline-none border border-black/10"
-/>
-
-
-
-<select
-className="
-h-16
-rounded-2xl
-bg-[#F5F5F7]
-px-6
-outline-none
-border
-border-black/10
-"
->
-
-<option>Select Category</option>
-
-<option>Elastic Tape</option>
-
-<option>Webbing</option>
-
-<option>Custom Manufacturing</option>
-
-</select>
-
-
-</div>
-
-
-
-
-
-<textarea
-
-placeholder="Tell us width, quantity, material or requirement..."
-
-className="
-w-full
-
-h-[240px]
-
-rounded-2xl
-
-bg-[#F5F5F7]
-
-p-6
-
-resize-none
-
-outline-none
-
-border
-border-black/10
-"
-
-/>
-
-
-
-
-
-<button
-
-className="
-w-full
-
-h-20
-
-rounded-2xl
-
-bg-black
-
-text-white
-
-
-uppercase
-tracking-[0.35em]
-text-xs
-
-
-flex
-items-center
-justify-center
-gap-4
-
-
-hover:bg-[#C86B32]
-
-transition
-duration-500
-"
-
->
-
-<Send size={18}/>
-
-Submit Inquiry
-
-
-</button>
-
-
-
-
-
-</motion.form>
-
-
-
-</div>
-
-
-
-</section>
-
-)
-
+import React, { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Send, CheckCircle, Mail, Phone, MapPin, Briefcase } from "lucide-react";
+
+interface ContactCTAProps {
+  defaultProduct?: string;
+}
+
+export default function ContactCTA({ defaultProduct }: ContactCTAProps) {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    company: "",
+    projectScope: "",
+    details: "",
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(false);
+
+  useEffect(() => {
+    let productParam = defaultProduct;
+    if (!productParam && typeof window !== "undefined") {
+      const params = new URLSearchParams(window.location.search);
+      productParam = params.get("product") || undefined;
+    }
+
+    if (productParam) {
+      const normalized = productParam.toLowerCase();
+      if (normalized.includes("elastic-tape") || normalized.includes("elastic tape")) {
+        setFormData((prev) => ({ ...prev, projectScope: "elastic-tape" }));
+      } else if (normalized.includes("webbing-tape") || normalized.includes("webbing tape")) {
+        setFormData((prev) => ({ ...prev, projectScope: "webbing-tape" }));
+      } else if (normalized.includes("jacquard")) {
+        setFormData((prev) => ({ ...prev, projectScope: "jacquard-elastic" }));
+      } else if (normalized.includes("custom") || normalized.includes("solutions")) {
+        setFormData((prev) => ({ ...prev, projectScope: "custom-solutions" }));
+      }
+    }
+  }, [defaultProduct]);
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    
+    setTimeout(() => {
+      setIsSubmitting(false);
+      setIsSuccess(true);
+      setFormData({
+        name: "",
+        email: "",
+        company: "",
+        projectScope: "",
+        details: "",
+      });
+    }, 1500);
+  };
+
+  return (
+    <div id="contact-form" className="w-full bg-[#F5F5F7] text-[#080808] font-['Marcellus',serif] py-28 border-t border-black/10">
+      <div className="w-full px-8 lg:px-20 grid grid-cols-1 lg:grid-cols-3 gap-16 items-start">
+        
+        {/* Contact Details (Left Column) */}
+        <div className="lg:col-span-1 space-y-10">
+          <div>
+            <h2 className="font-fjalla text-5xl md:text-6xl uppercase leading-none tracking-tight text-[#080808] mb-6">
+              LET'S CHAT
+            </h2>
+            <p className="text-black/55 text-sm md:text-base leading-8 max-w-sm">
+              Have custom elastic tape requirements, or a specific webbing tape specification you need manufactured? Fill out the form or reach out directly, and our engineering team will get back to you within 24 hours.
+            </p>
+          </div>
+
+          <div className="space-y-6 pt-10 border-t border-black/10">
+            <div className="flex items-start gap-4">
+              <div className="w-8 h-8 rounded-none border border-black/10 flex items-center justify-center bg-white text-[#C86B32] shrink-0 mt-0.5 shadow-sm">
+                <Mail className="w-4 h-4" />
+              </div>
+              <div>
+                <h3 className="font-bold text-[10px] tracking-widest uppercase text-neutral-400 font-sans">General Inquiry</h3>
+                <a href="mailto:info@rsenterprise.com" className="text-sm font-semibold hover:text-[#C86B32] transition duration-300 block mt-1">
+                  info@rsenterprise.com
+                </a>
+              </div>
+            </div>
+
+            <div className="flex items-start gap-4">
+              <div className="w-8 h-8 rounded-none border border-black/10 flex items-center justify-center bg-white text-[#C86B32] shrink-0 mt-0.5 shadow-sm">
+                <Briefcase className="w-4 h-4" />
+              </div>
+              <div>
+                <h3 className="font-bold text-[10px] tracking-widest uppercase text-neutral-400 font-sans">Partnership & Careers</h3>
+                <a href="mailto:partners@rsenterprise.com" className="text-sm font-semibold hover:text-[#C86B32] transition duration-300 block mt-1">
+                  partners@rsenterprise.com
+                </a>
+              </div>
+            </div>
+
+            <div className="flex items-start gap-4">
+              <div className="w-8 h-8 rounded-none border border-black/10 flex items-center justify-center bg-white text-[#C86B32] shrink-0 mt-0.5 shadow-sm">
+                <Phone className="w-4 h-4" />
+              </div>
+              <div>
+                <h3 className="font-bold text-[10px] tracking-widest uppercase text-neutral-400 font-sans">Call Operations</h3>
+                <a href="tel:+919837050515" className="text-sm font-semibold hover:text-[#C86B32] transition duration-300 block mt-1">
+                  +91 98370 50515
+                </a>
+              </div>
+            </div>
+
+            <div className="flex items-start gap-4">
+              <div className="w-8 h-8 rounded-none border border-black/10 flex items-center justify-center bg-white text-[#C86B32] shrink-0 mt-0.5 shadow-sm">
+                <MapPin className="w-4 h-4" />
+              </div>
+              <div>
+                <h3 className="font-bold text-[10px] tracking-widest uppercase text-neutral-400 font-sans">Corporate HQ</h3>
+                <p className="text-sm font-semibold text-neutral-800 block mt-1">
+                  Agra, Uttar Pradesh, India
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Contact Form / Success State (Right 2 Columns) */}
+        <div className="lg:col-span-2">
+          <AnimatePresence mode="wait">
+            {isSuccess ? (
+              <motion.div
+                key="success"
+                initial={{ opacity: 0, y: 15 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: 15 }}
+                className="bg-white border border-black/5 p-8 md:p-12 text-center space-y-6 shadow-sm rounded-none"
+              >
+                <CheckCircle className="mx-auto text-emerald-500 w-14 h-14" />
+                <h3 className="font-fjalla text-3xl uppercase tracking-tight text-neutral-900">
+                  Inquiry Received
+                </h3>
+                <p className="text-neutral-500 max-w-md mx-auto text-sm leading-8">
+                  Thank you for reaching out to R.S Enterprise. Our technical production team will review your tape specifications and get in touch with you shortly.
+                </p>
+                <button
+                  onClick={() => setIsSuccess(false)}
+                  className="px-10 py-4 bg-black hover:bg-[#C86B32] text-white rounded-none text-xs uppercase tracking-widest font-bold transition-all duration-300 cursor-pointer shadow-lg hover:shadow-xl"
+                >
+                  Send Another Message
+                </button>
+              </motion.div>
+            ) : (
+              <motion.form
+                key="form"
+                onSubmit={handleSubmit}
+                className="space-y-8"
+              >
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <label className="block text-[10px] uppercase tracking-[0.2em] font-black text-neutral-400 mb-2 font-sans">
+                      Your Name
+                    </label>
+                    <input
+                      type="text"
+                      required
+                      value={formData.name}
+                      onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                      className="w-full h-[56px] px-5 bg-white border border-black/10 rounded-none text-sm focus:outline-none focus:border-[#C86B32] text-[#080808] font-['Marcellus',serif] transition duration-300 placeholder-neutral-300 focus:shadow-[0_0_15px_rgba(200,107,50,0.05)]"
+                      placeholder="Jane Doe"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-[10px] uppercase tracking-[0.2em] font-black text-neutral-400 mb-2 font-sans">
+                      Corporate Email
+                    </label>
+                    <input
+                      type="email"
+                      required
+                      value={formData.email}
+                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                      className="w-full h-[56px] px-5 bg-white border border-black/10 rounded-none text-sm focus:outline-none focus:border-[#C86B32] text-[#080808] font-['Marcellus',serif] transition duration-300 placeholder-neutral-300 focus:shadow-[0_0_15px_rgba(200,107,50,0.05)]"
+                      placeholder="jane@company.com"
+                    />
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <label className="block text-[10px] uppercase tracking-[0.2em] font-black text-neutral-400 mb-2 font-sans">
+                      Company Name
+                    </label>
+                    <input
+                      type="text"
+                      required
+                      value={formData.company}
+                      onChange={(e) => setFormData({ ...formData, company: e.target.value })}
+                      className="w-full h-[56px] px-5 bg-white border border-black/10 rounded-none text-sm focus:outline-none focus:border-[#C86B32] text-[#080808] font-['Marcellus',serif] transition duration-300 placeholder-neutral-300 focus:shadow-[0_0_15px_rgba(200,107,50,0.05)]"
+                      placeholder="Acme Corp"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-[10px] uppercase tracking-[0.2em] font-black text-neutral-400 mb-2 font-sans">
+                      Inquiry Category
+                    </label>
+                    <div className="relative">
+                      <select
+                        required
+                        value={formData.projectScope}
+                        onChange={(e) => setFormData({ ...formData, projectScope: e.target.value })}
+                        className="w-full h-[56px] px-5 bg-white border border-black/10 rounded-none text-sm focus:outline-none focus:border-[#C86B32] text-[#080808] font-['Marcellus',serif] transition duration-300 appearance-none cursor-pointer"
+                      >
+                        <option value="">Select Category</option>
+                        <option value="elastic-tape">Elastic Tapes (Knitted/Woven)</option>
+                        <option value="webbing-tape">Webbing Tapes & Straps</option>
+                        <option value="jacquard-elastic">Jacquard Elastics</option>
+                        <option value="custom-solutions">Custom Solutions / OEM</option>
+                        <option value="other">Other / General Inquiry</option>
+                      </select>
+                      <div className="absolute right-5 top-1/2 -translate-y-1/2 pointer-events-none text-neutral-400">
+                        <svg className="w-4 h-4 fill-none stroke-current" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div>
+                  <label className="block text-[10px] uppercase tracking-[0.2em] font-black text-neutral-400 mb-2 font-sans">
+                    Requirements Details
+                  </label>
+                  <textarea
+                    rows={6}
+                    required
+                    value={formData.details}
+                    onChange={(e) => setFormData({ ...formData, details: e.target.value })}
+                    className="w-full px-5 py-4 bg-white border border-black/10 rounded-none text-sm focus:outline-none focus:border-[#C86B32] text-[#080808] resize-none font-['Marcellus',serif] transition duration-300 placeholder-neutral-300 focus:shadow-[0_0_15px_rgba(200,107,50,0.05)]"
+                    placeholder="Tell us what size, width, stretch coefficient, or raw materials you require..."
+                  />
+                </div>
+
+                <button
+                  type="submit"
+                  disabled={isSubmitting}
+                  className="w-full h-[64px] bg-black hover:bg-[#C86B32] text-white font-bold rounded-none text-xs uppercase tracking-[0.25em] transition-all duration-500 flex items-center justify-center gap-3 cursor-pointer disabled:opacity-50 shadow-md hover:shadow-lg active:scale-[0.99]"
+                >
+                  {isSubmitting ? (
+                    <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />
+                  ) : (
+                    <>
+                      <Send size={14} />
+                      <span>Submit Inquiry</span>
+                    </>
+                  )}
+                </button>
+              </motion.form>
+            )}
+          </AnimatePresence>
+        </div>
+
+      </div>
+    </div>
+  );
 }
