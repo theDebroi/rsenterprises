@@ -5,16 +5,17 @@
   --foreground: #111111; /* sleek deep charcoal/black */
   --orange-accent: #ff6b00; /* RS branding premium orange */
   --gray-light: #e5e5e0;
-  --font-serif: Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-serif: 'Marcellus', Georgia, Cambria, "Times New Roman", Times, serif;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-orange-accent: var(--orange-accent);
-  --font-sans: var(--font-geist-sans), Arial, sans-serif;
+  --font-sans: 'Marcellus', serif;
   --font-mono: var(--font-geist-mono), monospace;
   --font-serif: var(--font-serif);
+  --font-fjalla: 'Rowdies', sans-serif;
 }
 
 * {
@@ -28,7 +29,7 @@ html, body {
   overflow-x: hidden;
   background-color: var(--background);
   color: var(--foreground);
-  font-family: var(--font-geist-sans), Arial, sans-serif;
+  font-family: 'Marcellus', Georgia, serif;
 }
 
 /* Premium Scrollbar */

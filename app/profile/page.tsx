@@ -1,11 +1,13 @@
+"use client";
+
 import React from 'react';
-import { AboutSection } from '../components/AboutSection';
-import { ManufacturingSection } from '../components/ManufacturingSection';
-import { ProductsSection } from '../components/ProductsSection';
-import { ProcessTimeline } from '../components/ProcessTimeline';
-import { IndustriesGrid } from '../components/IndustriesGrid';
-import { TrustSection } from '../components/TrustSection';
-import { CorporateFooter } from '../components/CorporateFooter';
+import { AboutSection } from '@/components/AboutSection';
+import { ManufacturingSection } from '@/components/ManufacturingSection';
+import { ProductsSection } from '@/components/ProductsSection';
+import { ProcessTimeline } from '@/components/ProcessTimeline';
+import { IndustriesGrid } from '@/components/IndustriesGrid';
+import { TrustSection } from '@/components/TrustSection';
+import { CorporateFooter } from '@/components/CorporateFooter';
 import { motion } from 'framer-motion';
 
 /**

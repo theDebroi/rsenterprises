@@ -1,17 +1,6 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import type { Metadata } from "next"; // Wait, Metadata is type import, let's keep it clean
 import "./globals.css";
 import React from 'react';
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
   title: "R.S Enterprise — Elastic Tapes & Webbing Solutions",
@@ -26,8 +15,16 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+      className="antialiased"
     >
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Marcellus&family=Rowdies:wght@300;400;700&display=swap"
+          rel="stylesheet"
+        />
+      </head>
       <body className="bg-[#faf9f6] text-[#111]">{children}</body>
     </html>
   );

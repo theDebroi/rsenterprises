@@ -283,7 +283,7 @@ links.map((item)=>(
 
 key={item}
 
-href={`#${item.toLowerCase()}`}
+href={item === "Contact" ? "/contact" : `/#${item.toLowerCase()}`}
 
 
 className="
@@ -352,7 +352,7 @@ hover:after:w-full
 
 
 <a
-href="#contact"
+href="/contact"
 
 className="
 hidden

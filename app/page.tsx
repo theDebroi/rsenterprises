@@ -6,62 +6,280 @@ import CustomCursor from "@/components/CustomCursor";
 import SmoothScroll from "@/components/SmoothScroll";
 
 import Navbar from "@/components/NavBar";
+
 import AboutSection from "@/components/sections/About";
 import CatalogSection from "@/components/sections/Catalogue";
 import QualitySection from "@/components/sections/Quality";
-import Footer from "@/components/Footer";
 import ManufacturingSection from "@/components/sections/Manufacturing";
-import GlobalReach from "@/components/sections/GlobalPresence";
-import { Contact } from "lucide-react";
 import ContactCTA from "@/components/sections/Contact";
 
+import Footer from "@/components/Footer";
+
+// HERO CLIENT IMPORT
 
 const HeroSection = dynamic(
   () => import("@/components/HeroSection"),
   {
-    ssr: false,
+    ssr:false,
+  }
+);
+
+// GLOBAL REACH CLIENT IMPORT
+const GlobalReach = dynamic(
+  () => import("@/components/sections/GlobalPresence"),
+  {
+    ssr:false,
   }
 );
 
 
+
+
+
 export default function Home() {
-  return (
-    <SmoothScroll>
-
-      <CustomCursor />
 
 
-      <main
-        className="
-          relative
-          w-full
-          min-h-screen
-          overflow-hidden
-          bg-[#F5F5F7]
-        "
-      >
+return(
 
-        <Navbar />
-
-        <HeroSection />
-
-        <AboutSection />
-
-        <CatalogSection />
-
-        <QualitySection />
-
-        <ManufacturingSection />
-
-        <GlobalReach />
-
-        <ContactCTA />
-
-        <Footer />
+<SmoothScroll>
 
 
-      </main>
+<CustomCursor />
 
-    </SmoothScroll>
-  );
+
+
+<main
+
+className="
+relative
+
+w-full
+
+min-h-screen
+
+overflow-hidden
+
+bg-[#F5F5F7]
+"
+
+>
+
+
+
+<Navbar />
+
+
+
+<HeroSection />
+
+
+
+
+
+<SectionGap />
+
+
+<AboutSection />
+
+
+
+
+
+
+<SectionGap />
+
+
+<CatalogSection />
+
+
+
+
+
+
+<SectionGap />
+
+
+<QualitySection />
+
+
+
+
+
+
+
+<SectionGap />
+
+
+<ManufacturingSection />
+
+
+
+
+
+
+
+<SectionGap />
+
+
+<GlobalReach />
+
+
+
+
+
+
+
+
+<SectionGap />
+
+
+<ContactCTA />
+
+
+
+
+
+
+
+<SectionGap />
+
+
+<Footer />
+
+
+
+
+
+</main>
+
+
+
+
+</SmoothScroll>
+
+
+);
+
+
+}
+
+
+
+
+
+
+
+
+
+/* 
+ PREMIUM APPLE STYLE SECTION SEPARATOR
+*/
+
+
+
+function SectionGap(){
+
+
+return(
+
+
+<section
+
+className="
+w-full
+
+h-[220px]
+
+bg-[#F5F5F7]
+
+
+flex
+
+items-center
+
+justify-center
+"
+
+>
+
+
+
+<div
+
+className="
+relative
+
+w-[75%]
+
+flex
+
+items-center
+
+justify-center
+"
+
+>
+
+
+
+
+<div
+
+className="
+absolute
+
+h-px
+
+w-full
+
+
+bg-gradient-to-r
+
+
+from-transparent
+
+via-black/15
+
+to-transparent
+
+"
+
+/>
+
+
+
+
+<div
+
+className="
+w-3
+
+h-3
+
+rounded-full
+
+
+bg-[#C86B32]
+
+
+shadow-[0_0_30px_rgba(200,107,50,0.35)]
+"
+
+/>
+
+
+
+
+</div>
+
+
+
+
+
+</section>
+
+
+)
+
+
 }

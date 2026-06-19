@@ -3,17 +3,11 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { ShieldCheck, Award } from "lucide-react";
-import { Fjalla_One } from "next/font/google";
-
-const fjalla = Fjalla_One({
-  weight: "400",
-  subsets: ["latin"],
-});
-
 
 export default function QualitySection() {
   return (
     <section
+      id="quality"
       className="
         relative
         w-screen
@@ -91,15 +85,14 @@ export default function QualitySection() {
 
 
         <h2
-          className={`
-            ${fjalla.className}
-
+          className="
+            font-fjalla
             text-6xl
             md:text-8xl
             uppercase
             leading-[0.95]
             text-center
-          `}
+          "
         >
 
           ISO 9001:2015
@@ -153,13 +146,13 @@ export default function QualitySection() {
               px-10
 
               bg-white
+              border
+              border-black/10
 
               flex
               items-center
               justify-center
               gap-3
-
-              shadow-sm
             "
           >
 
@@ -179,12 +172,12 @@ export default function QualitySection() {
               h-16
               px-10
               bg-white
+              border
+              border-black/10
 
               flex
               items-center
               justify-center
-
-              shadow-sm
             "
           >
 

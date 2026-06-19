@@ -2,13 +2,8 @@
 
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { motion } from "framer-motion";
-import { Fjalla_One } from "next/font/google";
-
-const fjalla = Fjalla_One({
-  weight: "400",
-  subsets: ["latin"],
-});
 
 const years = ["2006", "2010", "2015", "2018", "2022", "2026"];
 
@@ -61,13 +56,13 @@ export default function AboutSection() {
 
 
             <h1
-              className={`
-                ${fjalla.className}
+              className="
+                font-fjalla
                 text-6xl
                 md:text-8xl
                 uppercase
                 leading-[1]
-              `}
+              "
             >
               18 Years Of
               <br />
@@ -85,26 +80,29 @@ export default function AboutSection() {
             </p>
 
 
-            <button
+            <Link
+              href="/#manufacturing"
               className="
                 mt-14
-    bg-[#C86B32]
-    w-[260px]
-    h-[90px]
-    text-white
-    text-sm
-    uppercase
-    tracking-[0.3em]
-    transition-all
-    duration-500
-    hover:bg-black
-    hover:w-[285px]
-    shadow-xl
-    shadow-[#C86B32]/20
+                inline-flex
+                items-center
+                justify-center
+                bg-[#C86B32]
+                w-[260px]
+                h-[90px]
+                text-white
+                text-sm
+                uppercase
+                tracking-[0.3em]
+                transition-all
+                duration-500
+                hover:bg-black
+                shadow-xl
+                shadow-[#C86B32]/20
               "
             >
               Explore Journey →
-            </button>
+            </Link>
 
           </motion.div>
 
@@ -121,11 +119,11 @@ export default function AboutSection() {
         <div className="mx-auto flex max-w-7xl items-center justify-between">
 
           <h2
-            className={`
-              ${fjalla.className}
+            className="
+              font-fjalla
               text-5xl
               text-[#C86B32]
-            `}
+            "
           >
             RS
           </h2>
@@ -141,7 +139,7 @@ export default function AboutSection() {
 
                 <p
                   className={`
-                    ${fjalla.className}
+                    font-fjalla
                     text-3xl
                     ${
                       index === 0

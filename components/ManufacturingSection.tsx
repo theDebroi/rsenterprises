@@ -6,7 +6,9 @@ import { MetricTile } from './MetricTile';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 
-gsap.registerPlugin(ScrollTrigger);
+if (typeof window !== 'undefined') {
+  gsap.registerPlugin(ScrollTrigger);
+}
 
 /**
  * Manufacturing Excellence – horizontal scroll showcase.

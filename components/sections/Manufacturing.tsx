@@ -3,12 +3,6 @@
 import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { Fjalla_One } from "next/font/google";
-
-const fjalla = Fjalla_One({
-  weight: "400",
-  subsets: ["latin"],
-});
 
 const stats = [
   {
@@ -29,6 +23,7 @@ const stats = [
 export default function ManufacturingSection() {
   return (
     <section
+      id="manufacturing"
       className="
         w-full
         min-h-screen
@@ -64,13 +59,13 @@ export default function ManufacturingSection() {
 
 
         <h2
-          className={`
-            ${fjalla.className}
+          className="
+            font-fjalla
             text-6xl
             md:text-8xl
             uppercase
             leading-none
-          `}
+          "
         >
           Precision
           <br />
@@ -171,11 +166,11 @@ export default function ManufacturingSection() {
           >
 
             <h3
-              className={`
-                ${fjalla.className}
+              className="
+                font-fjalla
                 text-7xl
                 text-[#C86B32]
-              `}
+              "
             >
 
               {item.value}

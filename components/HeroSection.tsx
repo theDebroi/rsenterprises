@@ -55,15 +55,27 @@ useState(false);
 const [progress,setProgress] =
 useState(0);
 
+const [isMobile, setIsMobile] = useState(false);
 
-
+useEffect(() => {
+  const checkMobile = () => {
+    setIsMobile(window.innerWidth < 768);
+  };
+  checkMobile();
+  window.addEventListener("resize", checkMobile);
+  return () => window.removeEventListener("resize", checkMobile);
+}, []);
 
 // LOAD IMAGES
 
 useEffect(()=>{
-
+  if (isMobile) {
+    setReady(true);
+    return;
+  }
 
 const loaded:HTMLImageElement[]=[];
+
 
 let count=0;
 
@@ -136,12 +148,8 @@ loaded[i]=img;
 
 // CANVAS RENDER
 
-
 useEffect(()=>{
-
-
-if(!ready)return;
-
+  if(!ready || isMobile)return;
 
 const canvas =
 canvasRef.current!;
@@ -299,7 +307,7 @@ resize
 };
 
 
-},[ready]);
+},[ready, isMobile]);
 
 
 
@@ -313,9 +321,7 @@ resize
 
 
 useEffect(()=>{
-
-
-if(!ready)return;
+  if(!ready || isMobile)return;
 
 
 gsap.registerPlugin(
@@ -376,7 +382,8 @@ self.progress *
 return()=>ctx.revert();
 
 
-},[ready]);
+},[ready, isMobile]);
+
 
 
 
@@ -606,23 +613,12 @@ backgroundSize:
 
 {/* MAIN FRAME ANIMATION */}
 
-<canvas
-
-ref={canvasRef}
-
-className="
-absolute
-
-inset-0
-
-w-full
-
-h-full
-
-z-[1]
-"
-
-/>
+{!isMobile && (
+  <canvas
+    ref={canvasRef}
+    className="absolute inset-0 w-full h-full z-[1]"
+  />
+)}
 
 
 
@@ -799,144 +795,24 @@ manufacturing.
 
 {/* BUTTONS */}
 
-<div
-
-className="
-flex
-
-items-center
-
-gap-3
-
-flex-wrap
-
-max-w-full
-"
-
->
-
-
-
-<button
-
-className="
-h-[52px]
-
-min-w-[145px]
-
-px-5
-
-
-bg-black
-
-text-white
-
-
-uppercase
-
-text-[10px]
-
-tracking-[0.12em]
-
-font-bold
-
-
-flex
-
-items-center
-
-justify-center
-
-gap-2
-
-
-transition
-
-hover:-translate-y-1
-"
-
->
-
-Contact
-
-
-<ArrowUpRight
-
-size={15}
-
-/>
-
-</button>
-
-
-
-
-
-
-
-<button
-
-className="
-h-[52px]
-
-min-w-[145px]
-
-px-5
-
-
-border
-
-border-black/20
-
-
-bg-white/30
-
-backdrop-blur-md
-
-
-uppercase
-
-text-[10px]
-
-tracking-[0.12em]
-
-font-bold
-
-
-flex
-
-items-center
-
-justify-center
-
-gap-2
-
-
-transition
-
-
-hover:bg-black
-
-hover:text-white
-
-hover:-translate-y-1
-"
-
->
-
-
-Catalogue
-
-
-<Download size={14}/>
-
-
-
-</button>
-
-
-
-</div>
+  <div className="flex items-center gap-3 flex-wrap max-w-full">
+    <a
+      href="/contact"
+      className="h-[52px] min-w-[145px] px-5 bg-black text-white uppercase text-[10px] tracking-[0.12em] font-bold flex items-center justify-center gap-2 transition hover:-translate-y-1 hover:bg-[#c86b32] duration-300"
+    >
+      Contact
+      <ArrowUpRight size={15} />
+    </a>
+
+    <a
+      href="/catalogue/company-catalogue.pdf"
+      download="company-catalogue.pdf"
+      className="h-[52px] min-w-[145px] px-5 border border-black/20 bg-white/30 backdrop-blur-md uppercase text-[10px] tracking-[0.12em] font-bold flex items-center justify-center gap-2 transition hover:bg-black hover:text-white hover:-translate-y-1 duration-300"
+    >
+      Catalogue
+      <Download size={14} />
+    </a>
+  </div>
 
 
 

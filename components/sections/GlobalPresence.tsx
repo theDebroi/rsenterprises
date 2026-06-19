@@ -2,25 +2,9 @@
 
 import React, { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
-import { Fjalla_One } from "next/font/google";
-
-import {
-  Canvas,
-  useFrame,
-} from "@react-three/fiber";
-
-import {
-  OrbitControls,
-} from "@react-three/drei";
-
+import { Canvas, useFrame } from "@react-three/fiber";
+import { OrbitControls } from "@react-three/drei";
 import ThreeGlobe from "three-globe";
-
-
-
-const fjalla = Fjalla_One({
-  weight: "400",
-  subsets: ["latin"],
-});
 
 
 
@@ -364,21 +348,15 @@ Global Network
 
 
 
-<h2
-
-className={`
-${fjalla.className}
-
-text-7xl
-
-md:text-[9rem]
-
-uppercase
-
-leading-[0.9]
-`}
-
->
+          <h2
+            className="
+              font-fjalla
+              text-7xl
+              md:text-[9rem]
+              uppercase
+              leading-[0.9]
+            "
+          >
 
 Trusted
 
