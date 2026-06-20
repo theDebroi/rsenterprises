@@ -4,31 +4,16 @@ import React, { useState, useRef } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 
+
 const categories = [
-  {
-    name: "Elastic Tape",
-    img: "/Product1.png",
-    key: "elastic",
-  },
-  {
-    name: "Webbing Tape",
-    img: "/product2.png",
-    key: "webbing",
-  },
-  {
-    name: "Jacquard Elastic",
-    img: "/product3.png",
-    key: "jacquard",
-  },
-  {
-    name: "Custom Solutions",
-    img: "/product4.png",
-    key: "custom",
-  },
+  { name: "Elastic Tape", img: "/Product1.png", key: "elastic" },
+  { name: "Webbing Tape", img: "/product2.png", key: "webbing" },
+  { name: "Jacquard Elastic", img: "/product3.png", key: "jacquard" },
+  { name: "Custom Solutions", img: "/product4.png", key: "custom" },
 ];
 
 
-const productData:any = {
+const productData: any = {
 
 elastic:[
 {name:"Plain Elastic Tape",img:"/elastic1.jpg"},
@@ -66,19 +51,21 @@ custom:[
 
 
 
+
+
 export default function CatalogSection(){
 
 
 const [active,setActive] = useState("elastic");
 
-const productRef =
-useRef<HTMLDivElement>(null);
+const productRef = useRef<HTMLDivElement>(null);
 
 
 
 function openProducts(key:string){
 
 setActive(key);
+
 
 setTimeout(()=>{
 
@@ -99,13 +86,7 @@ return(
 
 <section
 id="catalogue"
-className="
-w-full
-bg-[#F5F5F7]
-text-[#080808]
-py-32
-overflow-hidden
-"
+className="w-full bg-[#F5F5F7] text-[#080808] py-32 overflow-hidden"
 >
 
 
@@ -116,29 +97,15 @@ overflow-hidden
 <div className="text-center mb-24">
 
 
-<p
-className="
-text-[#C86B32]
-tracking-[0.45em]
-uppercase
-text-xs
-mb-6
-"
->
+<p className="text-[#C86B32] tracking-[0.45em] uppercase text-xs mb-6">
+
 Our Catalogue
+
 </p>
 
 
 
-<h2
-className="
-font-fjalla
-text-6xl
-md:text-8xl
-uppercase
-leading-none
-"
->
+<h2 className="font-fjalla text-6xl md:text-8xl uppercase leading-none">
 
 Engineered
 
@@ -157,36 +124,22 @@ Products
 
 
 
-{/* MAIN CATEGORY */}
+{/* CATEGORY */}
 
 
-<div
-className="
-grid
-grid-cols-1
-md:grid-cols-4
-
-border-y
-border-black/10
-"
->
+<div className="grid grid-cols-1 md:grid-cols-4 border-y border-black/10">
 
 
 {categories.map((item,index)=>(
+
 
 <motion.div
 
 key={item.key}
 
-initial={{
-opacity:0,
-y:40
-}}
+initial={{opacity:0,y:40}}
 
-whileInView={{
-opacity:1,
-y:0
-}}
+whileInView={{opacity:1,y:0}}
 
 transition={{
 duration:.7,
@@ -195,32 +148,12 @@ delay:index*.1
 
 onClick={()=>openProducts(item.key)}
 
-className="
-group
-cursor-pointer
-
-p-10
-
-md:border-r
-border-black/10
-
-last:border-r-0
-"
+className="group cursor-pointer p-10 md:border-r border-black/10 last:border-r-0"
 >
 
 
 
-<div
-className="
-relative
-
-aspect-square
-
-overflow-hidden
-
-bg-white
-"
->
+<div className="relative aspect-square overflow-hidden bg-white">
 
 
 <Image
@@ -233,17 +166,7 @@ fill
 
 sizes="25vw"
 
-className="
-object-cover
-
-grayscale
-
-transition-all
-duration-700
-
-group-hover:scale-110
-group-hover:grayscale-0
-"
+className="object-cover grayscale transition-all duration-700 group-hover:scale-110 group-hover:grayscale-0"
 
 />
 
@@ -252,22 +175,16 @@ group-hover:grayscale-0
 
 
 
-<h3
-className="
-font-fjalla
-text-center
-uppercase
-text-4xl
-mt-8
-"
->
+<h3 className="font-fjalla text-center uppercase text-4xl mt-8">
 
 {item.name}
 
 </h3>
 
 
+
 </motion.div>
+
 
 ))}
 
@@ -282,60 +199,43 @@ mt-8
 
 
 
+{/* SCROLL TARGET */}
+
+<div ref={productRef} className="h-1"></div>
+
+
+
+
+
+
+
 
 
 {/* PRODUCTS */}
 
 
-<div
-
-ref={productRef}
-
-className="
-pt-32
-
-px-6
-lg:px-20
-"
->
+<div className="mt-40 px-6 lg:px-20">
 
 
-<div
-className="
-flex
-justify-between
-items-center
 
-mb-14
-"
->
+<div className="flex justify-between items-center mb-16">
 
 
-<h3
-className="
-font-fjalla
-uppercase
-text-6xl
-"
->
+
+<h3 className="font-fjalla uppercase text-6xl">
 
 Collection
 
 </h3>
 
 
-<p
-className="
-uppercase
-tracking-[0.35em]
-text-xs
-text-[#C86B32]
-"
->
+
+<p className="uppercase tracking-[0.35em] text-xs text-[#C86B32]">
 
 {active}
 
 </p>
+
 
 
 </div>
@@ -346,43 +246,27 @@ text-[#C86B32]
 
 
 
+
+
 <AnimatePresence mode="wait">
+
 
 
 <motion.div
 
 key={active}
 
-initial={{
-opacity:0,
-y:30
-}}
+initial={{opacity:0,y:30}}
 
-animate={{
-opacity:1,
-y:0
-}}
+animate={{opacity:1,y:0}}
 
-exit={{
-opacity:0
-}}
+exit={{opacity:0}}
 
-transition={{
-duration:.5
-}}
+transition={{duration:.5}}
 
-
-className="
-grid
-
-grid-cols-2
-
-md:grid-cols-5
-
-gap-x-8
-gap-y-16
-"
+className="grid grid-cols-2 md:grid-cols-5 gap-x-8 gap-y-16"
 >
+
 
 
 
@@ -392,36 +276,21 @@ gap-y-16
 const msg =
 `Hello R.S Enterprise, I want quotation for ${item.name}`;
 
+
 const url =
 `https://wa.me/919837050515?text=${encodeURIComponent(msg)}`;
 
 
+
+
 return(
 
-<div
 
-key={item.name}
-
-className="
-group
-"
->
+<div key={item.name} className="group">
 
 
 
-<div
-className="
-relative
-
-aspect-square
-
-overflow-hidden
-
-bg-white
-
-shadow-sm
-"
->
+<div className="relative aspect-square overflow-hidden bg-white shadow-sm">
 
 
 
@@ -435,20 +304,10 @@ fill
 
 sizes="20vw"
 
-className="
-object-cover
-
-grayscale
-
-transition
-
-duration-700
-
-group-hover:scale-110
-group-hover:grayscale-0
-"
+className="object-cover grayscale transition duration-700 group-hover:scale-110 group-hover:grayscale-0"
 
 />
+
 
 
 </div>
@@ -457,25 +316,12 @@ group-hover:grayscale-0
 
 
 
-<h4
-className="
-mt-5
-
-text-center
-
-uppercase
-
-tracking-[0.15em]
-
-text-xs
-
-font-bold
-"
->
+<h4 className="mt-5 text-center uppercase tracking-[0.15em] text-xs font-bold">
 
 {item.name}
 
 </h4>
+
 
 
 
@@ -486,42 +332,7 @@ href={url}
 
 target="_blank"
 
-
-className="
-mt-4
-
-h-12
-
-w-full
-
-border
-
-border-black/20
-
-flex
-
-items-center
-
-justify-center
-
-uppercase
-
-tracking-[0.25em]
-
-text-[10px]
-
-
-transition
-
-duration-500
-
-
-hover:bg-[#C86B32]
-
-hover:text-white
-
-hover:border-[#C86B32]
-"
+className="mt-4 h-12 w-full border border-black/20 flex items-center justify-center uppercase tracking-[0.25em] text-[10px] transition duration-500 hover:bg-[#C86B32] hover:text-white hover:border-[#C86B32]"
 >
 
 
@@ -532,24 +343,27 @@ Inquiry
 
 
 
-
 </div>
+
 
 )
 
+
 })}
+
 
 
 
 </motion.div>
 
 
+
 </AnimatePresence>
 
 
 
-
 </div>
+
 
 
 
