@@ -21,7 +21,7 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
         <link
-          href="https://fonts.googleapis.com/css2?family=Marcellus&family=Elms+Sans:wght@300;400;700&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Marcellus&family=Playfair+Display:wght@400;700;900&display=swap"
           rel="stylesheet"
         />
       </head>
