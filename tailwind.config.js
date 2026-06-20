@@ -16,7 +16,7 @@ module.exports = {
       fontFamily: {
         sans: ['Marcellus', 'serif'],
         serif: ['Marcellus', 'serif'],
-        fjalla: ['"Red Hat Text"', 'sans-serif'],
+        fjalla: ['"Elms Sans"', 'sans-serif'],
       },
     },
   },

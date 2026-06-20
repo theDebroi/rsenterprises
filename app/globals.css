@@ -15,7 +15,7 @@
   --font-sans: 'Marcellus', serif;
   --font-mono: var(--font-geist-mono), monospace;
   --font-serif: var(--font-serif);
-  --font-fjalla: 'Red Hat Text', sans-serif;
+  --font-fjalla: 'Elms Sans', sans-serif;
 }
 
 * {
