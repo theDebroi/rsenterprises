@@ -16,11 +16,16 @@ const categories = [
 const productData: any = {
 
 elastic:[
-{name:"Plain Elastic Tape",img:"/elastic1.jpg"},
-{name:"Knitted Elastic",img:"/elastic2.jpg"},
-{name:"Button Hole Elastic",img:"/elastic3.jpg"},
-{name:"Braided Elastic",img:"/elastic4.jpg"},
-{name:"Printed Elastic",img:"/elastic5.jpg"},
+{name:"Binding Elastic Tape",img:"/elastic/binding.png"},
+{name:"Foiled Textured Elastic",img:"/elastic/foiled.png"},
+{name:"Furniture Elastic",img:"/elastic/furniture.png"},
+{name:"HerringBone Elastic",img:"/elastic/herringBone.png"},
+{name:"Multicolored Elastic",img:"/elastic/Multicolored.png"},
+{name:"Honeycomb Elastic Tape",img:"/elastic/Honeycomb.png"},
+{name:"Lurex Elastic",img:"/elastic/lurex.png"},
+{name:"Ribbed Elastic",img:"/elastic/ribbed.png"},
+{name:"Sandwich Elastic",img:"/elastic/sandwitch.png"},
+{name:"Laces Elastic",img:"/elastic/laces.png"},
 ],
 
 webbing:[
