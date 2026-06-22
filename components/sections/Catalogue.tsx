@@ -20,9 +20,9 @@ elastic:[
 {name:"Foiled Textured Elastic",img:"/elastic/foiled.png"},
 {name:"Furniture Elastic",img:"/elastic/furniture.png"},
 {name:"HerringBone Elastic",img:"/elastic/herringBone.png"},
-{name:"Multicolored Elastic",img:"/elastic/Multicolored.png"},
-{name:"Honeycomb Elastic Tape",img:"/elastic/Honeycomb.png"},
-{name:"Lurex Elastic",img:"/elastic/lurex.png"},
+{name:"Multicolored Elastic",img:"/elastic/multicolored.png"},
+{name:"Honeycomb Elastic Tape",img:"/elastic/honeycomb.png"},
+{name:"Lurex Elastic",img:"/elastic/Lurex.png"},
 {name:"Ribbed Elastic",img:"/elastic/ribbed.png"},
 {name:"Sandwich Elastic",img:"/elastic/sandwitch.png"},
 {name:"Laces Elastic",img:"/elastic/laces.png"},
@@ -30,14 +30,14 @@ elastic:[
 
 webbing:[
 {name:"Bag Straps",img:"/webbing/bag-staps.png"},
-{name:"Excercise Belt",img:"/webbing/Excercise.png"},
+{name:"Excercise Belt",img:"/webbing/excercise.png"},
 {name:"Binding Niwar",img:"/webbing/niwar.png"},
-{name:"Cotton Tape",img:"/webbing/Cotton-tape.png"},
-{name:"Metallic Webbings",img:"/webbing/Metallic.png"},
+{name:"Cotton Tape",img:"/webbing/cotton-tape.png"},
+{name:"Metallic Webbings",img:"/webbing/metallic.png"},
 {name:"Nylon Belts",img:"/webbing/nylon.png"},
 {name:"Parachute Belts",img:"/webbing/parachute.png"},
 {name:"Polyester Webbing Tapes ",img:"/webbing/polyster-webbing.png"},
-{name:"Reflector Tapes",img:"/webbing/Reflector.png"},
+{name:"Reflector Tapes",img:"/webbing/reflector.png"},
 {name:"Seat Belts",img:"/webbing/seat-belts.png"},
 ],
 
@@ -190,7 +190,7 @@ fill
 
 sizes="25vw"
 
-className="object-cover grayscale transition-all duration-700 group-hover:scale-110 group-hover:grayscale-0"
+className="object-cover transition-all duration-700 group-hover:scale-110"
 
 />
 
@@ -328,7 +328,7 @@ fill
 
 sizes="20vw"
 
-className="object-cover grayscale transition duration-700 group-hover:scale-110 group-hover:grayscale-0"
+className="object-cover transition duration-700 group-hover:scale-110"
 
 />
 

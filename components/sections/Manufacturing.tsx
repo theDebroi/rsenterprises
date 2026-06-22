@@ -120,7 +120,6 @@ export default function ManufacturingSection() {
 
           className="
             object-cover
-            grayscale
           "
         />
 

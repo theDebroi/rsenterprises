@@ -29,7 +29,7 @@ export default function AboutSection() {
             fill
             priority
             sizes="(max-width:768px) 100vw, 48vw"
-            className="object-cover grayscale"
+            className="object-cover"
           />
 
           <div className="absolute inset-0 bg-[#C86B32]/10" />

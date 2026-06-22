@@ -49,7 +49,7 @@ export default function MapSection() {
             allowFullScreen={true}
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
-            className="w-full h-full grayscale-[15%] contrast-[110%]"
+            className="w-full h-full"
           />
         </div>
 
