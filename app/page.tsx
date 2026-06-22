@@ -12,6 +12,7 @@ import CatalogSection from "../components/sections/Catalogue";
 import QualitySection from "../components/sections/Quality";
 import ManufacturingSection from "../components/sections/Manufacturing";
 import ContactCTA from "../components/sections/Contact";
+import MapSection from "../components/sections/MapSection";
 
 import Footer from "../components/Footer";
 
@@ -137,6 +138,11 @@ bg-[#F5F5F7]
 
 
 
+
+<SectionGap />
+
+
+<MapSection />
 
 
 
