@@ -53,7 +53,7 @@ export default function ContactCTA({ defaultProduct }: ContactCTAProps) {
     }[formData.projectScope] || formData.projectScope || "General Inquiry";
 
     const msg = `Hello R.S Enterprise,\n\nI have submitted an inquiry via your website. Here are my details:\n\n*Name:* ${formData.name}\n*Email:* ${formData.email}\n*Company:* ${formData.company}\n*Category:* ${categoryLabel}\n*Requirements:* ${formData.details}`;
-    const waUrl = `https://wa.me/447455044231?text=${encodeURIComponent(msg)}`;
+    const waUrl = `https://wa.me/917455044231?text=${encodeURIComponent(msg)}`;
 
     if (typeof window !== "undefined") {
       window.open(waUrl, "_blank");
@@ -93,21 +93,9 @@ export default function ContactCTA({ defaultProduct }: ContactCTAProps) {
                 <Mail className="w-4 h-4" />
               </div>
               <div>
-                <h3 className="font-bold text-[9px] md:text-[10px] tracking-widest uppercase text-neutral-400 font-sans">General Inquiry</h3>
-                <a href="mailto:info@rsenterprise.com" className="text-xs md:text-sm font-semibold hover:text-[#C86B32] transition duration-300 block mt-1">
-                  info@rsenterprise.com
-                </a>
-              </div>
-            </div>
-
-            <div className="flex items-start gap-4">
-              <div className="w-8 h-8 rounded-none border border-black/10 flex items-center justify-center bg-white text-[#C86B32] shrink-0 mt-0.5 shadow-sm">
-                <Briefcase className="w-4 h-4" />
-              </div>
-              <div>
-                <h3 className="font-bold text-[9px] md:text-[10px] tracking-widest uppercase text-neutral-400 font-sans">Partnership & Careers</h3>
-                <a href="mailto:partners@rsenterprise.com" className="text-xs md:text-sm font-semibold hover:text-[#C86B32] transition duration-300 block mt-1">
-                  partners@rsenterprise.com
+                <h3 className="font-bold text-[9px] md:text-[10px] tracking-widest uppercase text-neutral-400 font-sans">Sales Inquiry</h3>
+                <a href="mailto:sales@rstapes.co.in" className="text-xs md:text-sm font-semibold hover:text-[#C86B32] transition duration-300 block mt-1">
+                  sales@rstapes.co.in
                 </a>
               </div>
             </div>
@@ -118,8 +106,11 @@ export default function ContactCTA({ defaultProduct }: ContactCTAProps) {
               </div>
               <div>
                 <h3 className="font-bold text-[9px] md:text-[10px] tracking-widest uppercase text-neutral-400 font-sans">Call Operations</h3>
-                <a href="tel:+447455044231" className="text-xs md:text-sm font-semibold hover:text-[#C86B32] transition duration-300 block mt-1">
-                  074550 44231
+                <a href="tel:+917455044231" className="text-xs md:text-sm font-semibold hover:text-[#C86B32] transition duration-300 block mt-1">
+                  +91 74550 44231
+                </a>
+                <a href="tel:+917455044232" className="text-xs md:text-sm font-semibold hover:text-[#C86B32] transition duration-300 block mt-1 mt-0.5">
+                  +91 74550 44232
                 </a>
               </div>
             </div>
@@ -129,15 +120,27 @@ export default function ContactCTA({ defaultProduct }: ContactCTAProps) {
                 <MapPin className="w-4 h-4" />
               </div>
               <div>
-                <h3 className="font-bold text-[9px] md:text-[10px] tracking-widest uppercase text-neutral-400 font-sans">Corporate HQ</h3>
+                <h3 className="font-bold text-[9px] md:text-[10px] tracking-widest uppercase text-neutral-400 font-sans">Corporate Office</h3>
                 <a 
                   href="https://www.google.com/maps/dir//RS+Enterprise,+%23112,+Sector+12-A+Halwai+ki+bagichi,+behind+Nirmal+Heights,+Building,+Agra,+Uttar+Pradesh+282002/@21.1648512,72.7908352,14z/data=!4m8!4m7!1m0!1m5!1m1!1s0x39747799a303cbad:0x9ec76a167dae5e59!2m2!1d77.9794294!2d27.2026838?entry=ttu&g_ep=EgoyMDI2MDYxNi4wIKXMDSoASAFQAw%3D%3D"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-xs md:text-sm font-semibold text-neutral-800 hover:text-[#C86B32] transition duration-300 block mt-1"
+                  className="text-xs md:text-sm font-semibold text-neutral-800 hover:text-[#C86B32] transition duration-300 block mt-1 leading-relaxed"
                 >
-                  Agra, Uttar Pradesh, India
+                  Plot No 112, Sector 12-A, Halwai ki Bagichi, Oppo. Basant garden, Agra-282010, U.P.
                 </a>
+              </div>
+            </div>
+
+            <div className="flex items-start gap-4">
+              <div className="w-8 h-8 rounded-none border border-black/10 flex items-center justify-center bg-white text-[#C86B32] shrink-0 mt-0.5 shadow-sm">
+                <MapPin className="w-4 h-4" />
+              </div>
+              <div>
+                <h3 className="font-bold text-[9px] md:text-[10px] tracking-widest uppercase text-neutral-400 font-sans">Factory Unit</h3>
+                <p className="text-xs md:text-sm font-semibold text-neutral-800 block mt-1 leading-relaxed">
+                  #13 Sherjung, Agra-Mathura Road, Near Sherjung Dargah, Artoni, Agra-282001, U.P.
+                </p>
               </div>
             </div>
           </div>

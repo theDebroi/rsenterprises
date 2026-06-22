@@ -56,14 +56,16 @@ export default function MapSection() {
         {/* ADDRESS INFO BAR */}
         <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6 pt-8 border-t border-black/10 text-xs md:text-sm uppercase tracking-[0.15em] font-bold text-neutral-500 font-sans">
           <div>
-            <span className="text-[#C86B32] block mb-1">HQ Address</span>
-            <span className="text-[#080808]">
-              #112, Sector 12-A Halwai ki bagichi, behind Nirmal Heights, Agra, UP, India
+            <span className="text-[#C86B32] block mb-1">Corporate Office</span>
+            <span className="text-[#080808] normal-case font-semibold">
+              Plot No 112, Sector 12-A, Halwai ki Bagichi, Oppo. Basant garden, Agra-282010, U.P.
             </span>
           </div>
           <div className="md:text-right">
-            <span className="text-[#C86B32] block mb-1">Operational Hours</span>
-            <span className="text-[#080808]">Mon - Sat: 09:00 AM - 07:00 PM (IST)</span>
+            <span className="text-[#C86B32] block mb-1">Factory Unit</span>
+            <span className="text-[#080808] normal-case font-semibold">
+              #13 Sherjung, Agra-Mathura Road, Near Sherjung Dargah, Artoni, Agra-282001, U.P.
+            </span>
           </div>
         </div>
       </div>

@@ -103,19 +103,25 @@ export default function Footer() {
                   href="https://www.google.com/maps/dir//RS+Enterprise,+%23112,+Sector+12-A+Halwai+ki+bagichi,+behind+Nirmal+Heights,+Building,+Agra,+Uttar+Pradesh+282002/@21.1648512,72.7908352,14z/data=!4m8!4m7!1m0!1m5!1m1!1s0x39747799a303cbad:0x9ec76a167dae5e59!2m2!1d77.9794294!2d27.2026838?entry=ttu&g_ep=EgoyMDI2MDYxNi4wIKXMDSoASAFQAw%3D%3D"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-[#C86B32] transition-colors duration-300 block"
+                  className="hover:text-[#C86B32] transition-colors duration-300 block leading-relaxed text-sm"
                 >
-                  Agra, Uttar Pradesh, India
+                  Office: Plot No 112, Sector 12-A, Halwai ki Bagichi, Agra, U.P.
                 </a>
               </p>
-              <p>
-                <a href="mailto:info@rsenterprise.com" className="hover:text-[#C86B32] transition-colors duration-300">
-                  info@rsenterprise.com
-                </a>
+              <p className="text-neutral-500 font-normal leading-relaxed text-[13px] md:text-sm">
+                Factory: #13 Sherjung, Agra-Mathura Road, Artoni, Agra, U.P.
               </p>
               <p>
-                <a href="tel:+447455044231" className="hover:text-[#C86B32] transition-colors duration-300">
-                  074550 44231
+                <a href="mailto:sales@rstapes.co.in" className="hover:text-[#C86B32] transition-colors duration-300 text-sm">
+                  sales@rstapes.co.in
+                </a>
+              </p>
+              <p className="flex flex-col gap-1 text-sm">
+                <a href="tel:+917455044231" className="hover:text-[#C86B32] transition-colors duration-300">
+                  +91 74550 44231
+                </a>
+                <a href="tel:+917455044232" className="hover:text-[#C86B32] transition-colors duration-300">
+                  +91 74550 44232
                 </a>
               </p>
             </div>
