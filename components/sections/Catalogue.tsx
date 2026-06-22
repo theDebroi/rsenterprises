@@ -302,7 +302,7 @@ const msg =
 
 
 const url =
-`https://wa.me/919837050515?text=${encodeURIComponent(msg)}`;
+`https://wa.me/917455044231?text=${encodeURIComponent(msg)}`;
 
 
 
