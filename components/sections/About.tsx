@@ -58,7 +58,7 @@ export default function AboutSection() {
             <h1
               className="
                 font-fjalla
-                text-6xl
+                text-4xl
                 md:text-8xl
                 uppercase
                 leading-[1]
@@ -121,7 +121,8 @@ export default function AboutSection() {
           <h2
             className="
               font-fjalla
-              text-5xl
+              text-3xl
+              md:text-5xl
               text-[#C86B32]
             "
           >
@@ -140,7 +141,8 @@ export default function AboutSection() {
                 <p
                   className={`
                     font-fjalla
-                    text-3xl
+                    text-xl
+                    md:text-3xl
                     ${
                       index === 0
                         ? "text-[#C86B32]"

@@ -87,7 +87,7 @@ export default function QualitySection() {
         <h2
           className="
             font-fjalla
-            text-6xl
+            text-4xl
             md:text-8xl
             uppercase
             leading-[0.95]

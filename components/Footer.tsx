@@ -88,15 +88,24 @@ export default function Footer() {
               Contact Operations
             </h3>
             <div className="space-y-4 text-base font-semibold">
-              <p>Agra, Uttar Pradesh, India</p>
+              <p>
+                <a 
+                  href="https://www.google.com/maps/dir//RS+Enterprise,+%23112,+Sector+12-A+Halwai+ki+bagichi,+behind+Nirmal+Heights,+Building,+Agra,+Uttar+Pradesh+282002/@21.1648512,72.7908352,14z/data=!4m8!4m7!1m0!1m5!1m1!1s0x39747799a303cbad:0x9ec76a167dae5e59!2m2!1d77.9794294!2d27.2026838?entry=ttu&g_ep=EgoyMDI2MDYxNi4wIKXMDSoASAFQAw%3D%3D"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-[#C86B32] transition-colors duration-300 block"
+                >
+                  Agra, Uttar Pradesh, India
+                </a>
+              </p>
               <p>
                 <a href="mailto:info@rsenterprise.com" className="hover:text-[#C86B32] transition-colors duration-300">
                   info@rsenterprise.com
                 </a>
               </p>
               <p>
-                <a href="tel:+919837050515" className="hover:text-[#C86B32] transition-colors duration-300">
-                  +91 98370 50515
+                <a href="tel:+447455044231" className="hover:text-[#C86B32] transition-colors duration-300">
+                  074550 44231
                 </a>
               </p>
             </div>

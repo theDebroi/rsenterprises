@@ -128,6 +128,7 @@ flex-col
 items-center
 
 justify-center
+w-full
 "
 >
 
@@ -135,7 +136,8 @@ justify-center
 
 <div
 className="
-w-[820px]
+hidden md:block
+w-full max-w-[820px]
 h-[720px]
 "
 >
@@ -208,11 +210,13 @@ gap-y-4
 
 max-w-[650px]
 
-border-t
+md:border-t
 
 border-black/10
 
-pt-8
+pt-4
+md:pt-8
+w-full
 "
 >
 
@@ -228,7 +232,7 @@ key={item}
 className="
 uppercase
 
-text-xs
+text-[10px] md:text-xs
 
 tracking-[0.35em]
 
@@ -351,7 +355,7 @@ Global Network
           <h2
             className="
               font-fjalla
-              text-7xl
+              text-4xl
               md:text-[9rem]
               uppercase
               leading-[0.9]

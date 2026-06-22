@@ -41,13 +41,20 @@ webbing:[
 {name:"Seat Belts",img:"/webbing/seat-belts.png"},
 ],
 
-jacquard:[
-{name:"Logo Jacquard",img:"/jac1.jpg"},
-{name:"Fashion Elastic",img:"/jac2.jpg"},
-{name:"Pattern Elastic",img:"/jac3.jpg"},
-{name:"Designer Tape",img:"/jac4.jpg"},
-{name:"Premium Jacquard",img:"/jac5.jpg"},
-],
+  jacquard:[
+    {name:"Braided Elastic",img:"/custom/image.png"},
+    {name:"Buckle Elastic",img:"/custom/image copy.png"},
+    {name:"Dog Harness Belts",img:"/custom/image copy 2.png"},
+    {name:"Elastic Cords",img:"/custom/image copy 3.png"},
+    {name:"Jacquard belts",img:"/custom/image copy 4.png"},
+    {name:"Lycra Elastic",img:"/custom/image copy 5.png"},
+    {name:"Rainbow Elastic",img:"/custom/image copy 6.png"},
+    {name:"Woolen Elastic",img:"/custom/image copy 7.png"},
+    {name:"Woven Elastic",img:"/custom/image copy 8.png"},
+    {name:"Woven Monofilament Elastic",img:"/custom/image copy 9.png"},
+    {name:"Woven Shoulder Straps",img:"/custom/image copy 10.png"},
+    {name:"Woven Surgical Elastic",img:"/custom/image copy 11.png"},
+  ],
 
 custom:[
 {name:"Braided Elastic",img:"/custom/image.png"},
@@ -122,7 +129,7 @@ Our Catalogue
 
 
 
-<h2 className="font-fjalla text-6xl md:text-8xl uppercase leading-none">
+<h2 className="font-fjalla text-4xl md:text-8xl uppercase leading-none">
 
 Engineered
 
@@ -144,7 +151,7 @@ Products
 {/* CATEGORY */}
 
 
-<div className="grid grid-cols-1 md:grid-cols-4 border-y border-black/10">
+<div className="grid grid-cols-4 border-y border-black/10">
 
 
 {categories.map((item,index)=>(
@@ -165,12 +172,12 @@ delay:index*.1
 
 onClick={()=>openProducts(item.key)}
 
-className="group cursor-pointer p-10 md:border-r border-black/10 last:border-r-0"
+className="group cursor-pointer p-2 sm:p-4 md:p-10 border-r border-black/10 last:border-r-0 flex flex-col items-center justify-between"
 >
 
 
 
-<div className="relative aspect-square overflow-hidden bg-white">
+<div className="relative w-full aspect-square overflow-hidden bg-white">
 
 
 <Image
@@ -192,7 +199,7 @@ className="object-cover grayscale transition-all duration-700 group-hover:scale-
 
 
 
-<h3 className="font-fjalla text-center uppercase text-4xl mt-8">
+<h3 className="font-fjalla text-center uppercase text-[8px] sm:text-xs md:text-3xl lg:text-4xl mt-2 md:mt-8 tracking-wider font-bold">
 
 {item.name}
 
@@ -239,7 +246,7 @@ className="object-cover grayscale transition-all duration-700 group-hover:scale-
 
 
 
-<h3 className="font-fjalla uppercase text-6xl">
+<h3 className="font-fjalla uppercase text-3xl md:text-6xl">
 
 Collection
 
@@ -281,7 +288,7 @@ exit={{opacity:0}}
 
 transition={{duration:.5}}
 
-className="grid grid-cols-2 md:grid-cols-5 gap-x-8 gap-y-16"
+className="grid grid-cols-2 md:grid-cols-5 gap-x-3 md:gap-x-8 gap-y-6 md:gap-y-16"
 >
 
 
@@ -295,7 +302,7 @@ const msg =
 
 
 const url =
-`https://wa.me/919837050515?text=${encodeURIComponent(msg)}`;
+`https://wa.me/447455044231?text=${encodeURIComponent(msg)}`;
 
 
 
@@ -303,11 +310,11 @@ const url =
 return(
 
 
-<div key={item.name} className="group">
+<div key={item.name} className="group flex flex-col justify-between h-full">
 
 
 
-<div className="relative aspect-square overflow-hidden bg-white shadow-sm">
+<div className="relative w-full aspect-square overflow-hidden bg-white shadow-sm">
 
 
 
@@ -333,7 +340,7 @@ className="object-cover grayscale transition duration-700 group-hover:scale-110 
 
 
 
-<h4 className="mt-5 text-center uppercase tracking-[0.15em] text-xs font-bold">
+<h4 className="mt-2 md:mt-5 text-center uppercase tracking-[0.15em] text-[10px] md:text-xs font-bold min-h-[32px] flex items-center justify-center">
 
 {item.name}
 
@@ -349,7 +356,7 @@ href={url}
 
 target="_blank"
 
-className="mt-4 h-12 w-full border border-black/20 flex items-center justify-center uppercase tracking-[0.25em] text-[10px] transition duration-500 hover:bg-[#C86B32] hover:text-white hover:border-[#C86B32]"
+className="mt-2 md:mt-4 h-9 md:h-12 w-full border border-black/20 flex items-center justify-center uppercase tracking-[0.25em] text-[8px] md:text-[10px] transition duration-500 hover:bg-[#C86B32] hover:text-white hover:border-[#C86B32]"
 >
 
 

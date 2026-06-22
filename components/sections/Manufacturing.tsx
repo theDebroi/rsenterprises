@@ -61,7 +61,7 @@ export default function ManufacturingSection() {
         <h2
           className="
             font-fjalla
-            text-6xl
+            text-4xl
             md:text-8xl
             uppercase
             leading-none
@@ -105,7 +105,8 @@ export default function ManufacturingSection() {
         className="
           relative
           w-full
-          h-[650px]
+          h-[300px]
+          md:h-[650px]
           overflow-hidden
         "
       >
@@ -168,7 +169,8 @@ export default function ManufacturingSection() {
             <h3
               className="
                 font-fjalla
-                text-7xl
+                text-4xl
+                md:text-7xl
                 text-[#C86B32]
               "
             >
