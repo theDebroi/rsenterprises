@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     "High-performance elastic tapes and webbing solutions crafted with innovation, quality and precision since 2006.",
   keywords: ["elastic tape", "webbing", "textile manufacturer", "RS Enterprise", "India"],
   icons: {
-    icon: "/favicon.ico",
+    icon: "/icon.png",
   },
 };
 
@@ -21,7 +21,7 @@ export default function RootLayout({
       className="antialiased"
     >
       <head>
-        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" href="/icon.png" type="image/png" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
         <link
