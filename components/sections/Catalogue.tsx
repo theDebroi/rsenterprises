@@ -29,11 +29,16 @@ elastic:[
 ],
 
 webbing:[
-{name:"Nylon Webbing",img:"/web1.jpg"},
-{name:"Polyester Webbing",img:"/web2.jpg"},
-{name:"Bag Webbing",img:"/web3.jpg"},
-{name:"Safety Webbing",img:"/web4.jpg"},
-{name:"Colored Webbing",img:"/web5.jpg"},
+{name:"Bag Straps",img:"/webbing/bag-staps.png"},
+{name:"Excercise Belt",img:"/webbing/Excercise.png"},
+{name:"Binding Niwar",img:"/webbing/niwar.png"},
+{name:"Cotton Tape",img:"/webbing/Cotton-tape.png"},
+{name:"Metallic Webbings",img:"/webbing/Metallic.png"},
+{name:"Nylon Belts",img:"/webbing/nylon.png"},
+{name:"Parachute Belts",img:"/webbing/parachute.png"},
+{name:"Polyester Webbing Tapes ",img:"/webbing/polyster-webbing.png"},
+{name:"Reflector Tapes",img:"/webbing/Reflector.png"},
+{name:"Seat Belts",img:"/webbing/seat-belts.png"},
 ],
 
 jacquard:[
@@ -45,11 +50,18 @@ jacquard:[
 ],
 
 custom:[
-{name:"Custom Width Tape",img:"/custom1.jpg"},
-{name:"Brand Label Elastic",img:"/custom2.jpg"},
-{name:"Special Material",img:"/custom3.jpg"},
-{name:"OEM Production",img:"/custom4.jpg"},
-{name:"Custom Colors",img:"/custom5.jpg"},
+{name:"Braided Elastic",img:"/custom/image.png"},
+{name:"Buckle Elastic",img:"/custom/image copy.png"},
+{name:"Dog Harness Belts",img:"/custom/image copy 2.png"},
+{name:"Elastic Cords",img:"/custom/image copy 3.png"},
+{name:"Jacquard belts",img:"/custom/image copy 4.png"},
+{name:"Lycra Elastic",img:"/custom/image copy 5.png"},
+{name:"Rainbow Elastic",img:"/custom/image copy 6.png"},
+{name:"Woolen Elastic",img:"/custom/image copy 7.png"},
+{name:"Woven Elastic",img:"/custom/image copy 8.png"},
+{name:"Woven Monofilament Elastic",img:"/custom/image copy 9.png"},
+{name:"Woven Shoulder Straps",img:"/custom/image copy 10.png"},
+{name:"Woven Surgical Elastic",img:"/custom/image copy 11.png"},
 ],
 
 };
