@@ -2,6 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 const navigationLinks = [
   { name: "About", href: "/#about" },
@@ -23,7 +24,16 @@ export default function Footer() {
       <div className="max-w-[1500px] mx-auto">
         
         {/* TOP: HUGE BRAND TYPOGRAPHY */}
-        <div className="mb-20">
+        <div className="mb-20 space-y-6">
+          <div className="relative w-[180px] h-[55px] md:w-[220px] md:h-[70px]">
+            <Image
+              src="/icon.png"
+              alt="R.S. Enterprise Logo"
+              fill
+              sizes="(max-width: 768px) 180px, 220px"
+              className="object-contain"
+            />
+          </div>
           <h2
             className="
               font-fjalla

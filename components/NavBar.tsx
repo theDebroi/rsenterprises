@@ -5,6 +5,7 @@ import React, {
   useState
 } from "react";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 
@@ -153,93 +154,24 @@ group
 <div
 
 className="
-flex
-items-end
-gap-4
+relative
+w-[140px]
+h-[45px]
+md:w-[170px]
+md:h-[55px]
 "
 
 >
 
 
-
-<h1
-
-className="
-text-[34px]
-
-leading-none
-
-font-black
-
-tracking-[-0.08em]
-
-text-[#080808]
-"
-
->
-
-R.S
-
-</h1>
-
-
-
-
-
-<div
-
-className="
-pb-1
-"
-
->
-
-
-<p
-
-className="
-text-[10px]
-
-tracking-[0.45em]
-
-font-black
-
-text-[#080808]
-
-"
-
->
-
-ENTERPRISE
-
-</p>
-
-
-
-<p
-
-className="
-mt-1
-
-text-[8px]
-
-tracking-[0.35em]
-
-uppercase
-
-text-neutral-500
-
-"
-
->
-
-Since 2006
-
-</p>
-
-
-</div>
-
+<Image
+src="/icon.png"
+alt="R.S. Enterprise"
+fill
+priority
+sizes="(max-width: 768px) 140px, 170px"
+className="object-contain"
+/>
 
 
 </div>
