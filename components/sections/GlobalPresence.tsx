@@ -177,7 +177,7 @@ enableZoom={false}
 
 enablePan={false}
 
-enableRotate={false}
+enableRotate={true}
 
 />
 
@@ -304,12 +304,7 @@ overflow-hidden
 <div
 className="
 w-full
-max-w-[1400px]
-mx-auto
-px-6
-md:px-12
-lg:px-20
-
+premium-padding-container
 grid
 
 grid-cols-1
@@ -343,7 +338,8 @@ uppercase
 
 tracking-[0.45em]
 
-text-xs
+text-base
+md:text-lg
 
 text-[#C86B32]
 

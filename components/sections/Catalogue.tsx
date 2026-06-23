@@ -110,8 +110,9 @@ return(
 
 <section
 id="catalogue"
-className="w-full bg-[#F5F5F7] text-[#080808] py-32 overflow-hidden"
+className="w-full bg-[#F5F5F7] text-[#080808] py-20 premium-padding-container overflow-hidden"
 >
+  <div className="w-full py-8 md:py-16 flex flex-col items-center">
 
 
 
@@ -141,7 +142,7 @@ Products
 </div>
 
 
-<div style={{ height: "60px" }} />
+<div style={{ height: "20px" }} />
 
 
 
@@ -149,7 +150,7 @@ Products
 {/* CATEGORY */}
 
 
-<div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 px-[8vw] lg:px-[12vw] w-full">
+<div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 w-full px-4 md:px-8">
 
 
 {categories.map((item,index)=>(
@@ -227,18 +228,18 @@ className="object-cover transition-all duration-700 group-hover:scale-110"
 
 
 
-<div style={{ height: "120px" }} />
+<div style={{ height: "40px" }} />
 
 
 
 {/* PRODUCTS */}
 
 
-<div className="mt-20 px-[8vw] lg:px-[12vw] w-full">
+<div className="mt-8 w-full px-4 md:px-8">
 
 
 
-<div className="flex flex-col items-center justify-center mb-16 text-center" style={{ textAlign: "center" }}>
+<div className="flex flex-col items-center justify-center mb-8 text-center" style={{ textAlign: "center" }}>
 
 
 
@@ -255,7 +256,7 @@ Collection
 
 </p>
 
-<div style={{ height: "60px" }} />
+<div style={{ height: "20px" }} />
 
 
 
@@ -389,6 +390,7 @@ Inquiry
 
 
 
+  </div>
 </section>
 
 )

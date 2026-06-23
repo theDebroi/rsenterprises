@@ -443,7 +443,7 @@ justify-center
 <div className="text-center flex flex-col items-center">
 
 
-<div className="relative w-72 h-72 mb-6 flex items-center justify-center">
+<div className="relative w-96 h-96 mb-0 flex items-center justify-center">
   <img
     src="/icon.png"
     alt="R.S. Enterprise Logo"
@@ -456,11 +456,11 @@ justify-center
 <div
 
 className="
-mt-14
+mt-2
 
 w-[300px]
 
-h-[2px]
+h-[6px]
 
 bg-white/10
 
@@ -496,11 +496,12 @@ bg-[#c86b32]
 <p
 
 className="
-mt-5
+mt-3
 
-text-neutral-500
+text-neutral-400
 
-text-[10px]
+text-[14px]
+font-bold
 
 tracking-[0.35em]
 "
@@ -542,7 +543,7 @@ pt-[128px]
 
 overflow-hidden
 
-bg-[#f7f3ea]
+bg-white
 "
 
 >
@@ -614,7 +615,7 @@ z-[2]
 
 bg-gradient-to-r
 
-from-[#f7f3ea]/55
+from-white/55
 
 via-transparent
 

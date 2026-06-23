@@ -81,63 +81,49 @@ export default function ManufacturingSection() {
 
 
 
-      {/* FULL WIDTH IMAGE */}
-
-
-      <motion.div
-
-        initial={{
-          opacity:0,
-          y:60,
-        }}
-
-        whileInView={{
-          opacity:1,
-          y:0,
-        }}
-
-        transition={{
-          duration:1,
-        }}
-
-        viewport={{
-          once:true,
-        }}
-
-
-        className="
-          relative
-          w-full
-          h-[300px]
-          md:h-[650px]
-          overflow-hidden
-        "
-      >
-
-        <Image
-          src="/factory.jpg"
-          alt="Manufacturing"
-
-          fill
-          sizes="100vw"
-
+      {/* FACTORY PHOTO WITH EDGE PADDING */}
+      <div className="w-full premium-padding-container">
+        <motion.div
+          initial={{
+            opacity:0,
+            y:60,
+          }}
+          whileInView={{
+            opacity:1,
+            y:0,
+          }}
+          transition={{
+            duration:1,
+          }}
+          viewport={{
+            once:true,
+          }}
           className="
-            object-cover
+            relative
+            w-full
+            h-[300px]
+            md:h-[650px]
+            overflow-hidden
+            rounded-3xl
+            shadow-lg
           "
-        />
-
-<div style={{ height: "50px" }} />
-
-        <div
-          className="
-            absolute
-            inset-0
-            bg-[#C86B32]/10
-          "
-        />
-
-
-      </motion.div>
+        >
+          <Image
+            src="/factory.jpg"
+            alt="Manufacturing"
+            fill
+            sizes="(max-width: 1024px) 100vw, 85vw"
+            className="object-cover"
+          />
+          <div
+            className="
+              absolute
+              inset-0
+              bg-[#C86B32]/10
+            "
+          />
+        </motion.div>
+      </div>
 
 
 

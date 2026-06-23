@@ -15,59 +15,59 @@ export default function MapSection() {
       id="map-section"
       className="w-full bg-[#F5F5F7] text-[#080808] py-16 md:py-24 border-t border-black/10 overflow-hidden"
     >
-      <div className="w-full px-6 md:px-8 lg:px-20 max-w-[1400px] mx-auto">
-        {/* HEADER */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
-          <div>
-            <p className="text-[#C86B32] tracking-[0.45em] uppercase text-xs mb-3 font-semibold">
-              Find Our Facility
-            </p>
-            <h2 className="font-fjalla font-bold text-3xl md:text-5xl uppercase leading-none tracking-tight">
-              Corporate Headquarters
-            </h2>
-          </div>
-          <div>
-            <a
-              href={mapUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 bg-[#C86B32] text-white px-6 py-4 text-xs uppercase tracking-widest font-bold transition duration-300 hover:bg-black shadow-lg"
-            >
-              <Navigation className="w-4 h-4" />
-              Get Directions
-            </a>
+      <div className="w-full premium-padding-container">
+        {/* Section Header: Centered */}
+        <div className="w-full flex flex-col items-center justify-center text-center mb-12 gap-4">
+          <p className="text-[#C86B32] tracking-[0.45em] uppercase text-base md:text-lg font-semibold text-center">
+            Find Our Facility
+          </p>
+          <h2 className="font-fjalla font-bold text-3xl md:text-5xl uppercase leading-none tracking-tight text-center">
+            Corporate Headquarters
+          </h2>
+          <a
+            href={mapUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-3 bg-[#C86B32] text-white px-6 py-4 text-xs uppercase tracking-widest font-bold transition duration-300 hover:bg-black shadow-lg mt-4"
+          >
+            <Navigation className="w-4 h-4" />
+            Get Directions
+          </a>
+        </div>
+
+        <div style={{ height: "40px" }} />
+
+        {/* MAP CONTAINER: Centered and Rounded */}
+        <div className="w-full flex justify-center items-center">
+          <div className="relative w-full max-w-[1000px] h-[400px] md:h-[500px] border border-black/15 bg-white shadow-sm overflow-hidden rounded-2xl">
+            <iframe
+              src={embedUrl}
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen={true}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              className="w-full h-full"
+            />
           </div>
         </div>
 
-        <div style={{ height: "60px" }} />
-
-        {/* MAP CONTAINER */}
-        <div className="relative w-full h-[400px] md:h-[500px] border border-black/15 bg-white shadow-sm overflow-hidden">
-          <iframe
-            src={embedUrl}
-            width="100%"
-            height="100%"
-            style={{ border: 0 }}
-            allowFullScreen={true}
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-            className="w-full h-full"
-          />
-        </div>
-
-        {/* ADDRESS INFO BAR */}
-        <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6 pt-8 border-t border-black/10 text-xs md:text-sm uppercase tracking-[0.15em] font-bold text-neutral-500 font-sans">
-          <div>
-            <span className="text-[#C86B32] block mb-1">Corporate Office</span>
-            <span className="text-[#080808] normal-case font-semibold">
-              Plot No 112, Sector 12-A, Halwai ki Bagichi, Oppo. Basant garden, Agra-282010, U.P.
-            </span>
-          </div>
-          <div className="md:text-right">
-            <span className="text-[#C86B32] block mb-1">Factory Unit</span>
-            <span className="text-[#080808] normal-case font-semibold">
-              #13 Sherjung, Agra-Mathura Road, Near Sherjung Dargah, Artoni, Agra-282001, U.P.
-            </span>
+        {/* ADDRESS INFO BAR: Centered */}
+        <div className="w-full flex justify-center items-center mt-8">
+          <div className="w-full max-w-[1000px] grid grid-cols-1 md:grid-cols-2 gap-6 pt-8 border-t border-black/10 text-xs md:text-sm uppercase tracking-[0.15em] font-bold text-neutral-500 font-sans text-center md:text-left">
+            <div>
+              <span className="text-[#C86B32] block mb-1">Corporate Office</span>
+              <span className="text-[#080808] normal-case font-semibold">
+                Plot No 112, Sector 12-A, Halwai ki Bagichi, Oppo. Basant garden, Agra-282010, U.P.
+              </span>
+            </div>
+            <div className="md:text-right text-center">
+              <span className="text-[#C86B32] block mb-1">Factory Unit</span>
+              <span className="text-[#080808] normal-case font-semibold">
+                #13 Sherjung, Agra-Mathura Road, Near Sherjung Dargah, Artoni, Agra-282001, U.P.
+              </span>
+            </div>
           </div>
         </div>
       </div>

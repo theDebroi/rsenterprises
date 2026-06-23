@@ -165,7 +165,7 @@ relative
 
 uppercase
 
-text-[11px]
+text-[14px]
 
 tracking-[0.28em]
 
@@ -259,7 +259,7 @@ uppercase
 
 tracking-[0.18em]
 
-text-[10px]
+text-[12px]
 
 font-black
 
