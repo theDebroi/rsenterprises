@@ -162,7 +162,7 @@ export default function QualitySection() {
             <div className="flex items-center justify-between gap-4 mb-6">
               <div className="relative w-20 h-12 flex items-center justify-center bg-white border border-black/5 rounded p-1 shadow-sm">
                 <Image
-                  src="/msme-logo.png"
+                  src="/MSME-logo.png"
                   alt="MSME Logo"
                   width={50}
                   height={50}
