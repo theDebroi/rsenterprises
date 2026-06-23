@@ -94,9 +94,10 @@ bg-[#F5F5F7]
 
 <CatalogSection />
 
+<SectionGap />
 
 
-
+<CataloguesSection />
 
 
 
@@ -112,12 +113,6 @@ bg-[#F5F5F7]
 
 <QualityCertifications />
 
-
-
-<SectionGap />
-
-
-<CataloguesSection />
 
 
 
