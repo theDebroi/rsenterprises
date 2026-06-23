@@ -33,7 +33,7 @@ export default function CataloguesSection() {
     >
       <div className="w-full premium-padding-container mx-auto">
         {/* Section Header */}
-        <div className="w-full flex flex-col items-center justify-center text-center mb-20 mx-auto" style={{ width: "100%", display: "flex", flexDirection: "column", alignItems: "center", justifycontent: "center" }}>
+        <div className="w-full flex flex-col items-center justify-center text-center mb-20 mx-auto" style={{ width: "100%", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center" }}>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
