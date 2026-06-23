@@ -138,7 +138,7 @@ w-full
 className="
 hidden md:block
 w-full max-w-[820px]
-h-[720px]
+h-[950px]
 "
 >
 
@@ -355,16 +355,16 @@ Global Network
           <h2
             className="
               font-fjalla
-              text-4xl
-              md:text-[9rem]
+              text-3xl
+              md:text-7xl
+              font-bold
               uppercase
-              leading-[0.9]
+              leading-none
             "
           >
 
 Trusted
 
-<br/>
 
 Across
 
@@ -373,6 +373,8 @@ Across
 Borders
 
 </h2>
+
+<div style={{ height: "50px" }} />
 
 
 
@@ -391,8 +393,7 @@ text-black/50
 "
 >
 
-Supplying premium elastic tapes and webbing
-solutions to international manufacturers.
+Exporting to leading manufacturing hubs worldwide, R.S Enterprise is globally recognized for engineering high-performance elastic and webbing solutions. Built to meet international regulatory safety standards and chemical guidelines, our products deliver consistent durability and precision. Through rigorous quality assurance and global delivery frameworks, we serve as a trusted long-term partner to premier footwear and apparel brands across the globe.
 
 </p>
 

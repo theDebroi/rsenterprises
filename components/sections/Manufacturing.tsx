@@ -61,10 +61,11 @@ export default function ManufacturingSection() {
         <h2
           className="
             font-fjalla
-            text-4xl
-            md:text-8xl
+            text-3xl
+            md:text-5xl
             uppercase
             leading-none
+            font-bold
           "
         >
           Precision
@@ -74,6 +75,8 @@ export default function ManufacturingSection() {
 
 
       </div>
+
+      <div style={{ height: "60px" }} />
 
 
 
@@ -123,6 +126,7 @@ export default function ManufacturingSection() {
           "
         />
 
+<div style={{ height: "50px" }} />
 
         <div
           className="
@@ -142,12 +146,13 @@ export default function ManufacturingSection() {
 
       {/* STATS */}
 
-
+      <div style={{ height: "50px" }} />
       <div
         className="
           w-full
           px-10
           py-20
+          font-bold
 
           grid
           grid-cols-1

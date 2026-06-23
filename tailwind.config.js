@@ -14,9 +14,9 @@ module.exports = {
         amberCopper: '#c86b32',
       },
       fontFamily: {
-        sans: ['Marcellus', 'serif'],
-        serif: ['Marcellus', 'serif'],
-        fjalla: ['"Playfair Display"', 'serif'],
+        sans: ['Puritan', 'sans-serif'],
+        serif: ['Puritan', 'sans-serif'],
+        fjalla: ['Inter', 'sans-serif'],
       },
     },
   },

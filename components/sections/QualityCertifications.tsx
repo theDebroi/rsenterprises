@@ -93,7 +93,7 @@ export default function QualityCertifications() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="font-fjalla text-4xl md:text-6xl lg:text-7xl uppercase leading-tight mb-8 font-bold text-center"
+            className="font-fjalla text-3xl md:text-5xl uppercase leading-tight mb-8 font-bold text-center"
             style={{ textAlign: "center", width: "100%" }}
           >
             Internationally Tested.<br className="hidden sm:inline" /> Globally Accepted.
@@ -110,6 +110,8 @@ export default function QualityCertifications() {
             Our products undergo strict quality and chemical safety testing through TÜV SÜD accredited laboratories, ensuring compliance with global footwear material standards.
           </motion.p>
         </div>
+
+        <div style={{ height: "60px" }} />
 
         {/* Report Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16 mb-24 w-full">

@@ -22,7 +22,7 @@ export default function MapSection() {
             <p className="text-[#C86B32] tracking-[0.45em] uppercase text-xs mb-3 font-semibold">
               Find Our Facility
             </p>
-            <h2 className="font-fjalla text-4xl md:text-6xl uppercase leading-none tracking-tight">
+            <h2 className="font-fjalla font-bold text-3xl md:text-5xl uppercase leading-none tracking-tight">
               Corporate Headquarters
             </h2>
           </div>
@@ -38,6 +38,8 @@ export default function MapSection() {
             </a>
           </div>
         </div>
+
+        <div style={{ height: "60px" }} />
 
         {/* MAP CONTAINER */}
         <div className="relative w-full h-[400px] md:h-[500px] border border-black/15 bg-white shadow-sm overflow-hidden">

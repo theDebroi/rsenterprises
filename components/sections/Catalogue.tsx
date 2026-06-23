@@ -129,12 +129,10 @@ Our Catalogue
 
 
 
-<h2 className="font-fjalla text-4xl md:text-8xl uppercase leading-none">
+<h2 className="font-fjalla font-bold text-3xl md:text-6xl uppercase leading-none">
 
 Engineered
-
-<br/>
-
+<br />
 Products
 
 </h2>
@@ -143,7 +141,7 @@ Products
 </div>
 
 
-
+<div style={{ height: "60px" }} />
 
 
 
@@ -151,7 +149,7 @@ Products
 {/* CATEGORY */}
 
 
-<div className="grid grid-cols-4 border-y border-black/10">
+<div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 px-6 lg:px-20">
 
 
 {categories.map((item,index)=>(
@@ -172,7 +170,7 @@ delay:index*.1
 
 onClick={()=>openProducts(item.key)}
 
-className="group cursor-pointer p-2 sm:p-4 md:p-10 border-r border-black/10 last:border-r-0 flex flex-col items-center justify-between"
+className="group cursor-pointer p-4 md:p-8 border border-black/15 flex flex-col items-center justify-between bg-white shadow-sm hover:shadow-md transition-all duration-300"
 >
 
 
@@ -199,7 +197,7 @@ className="object-cover transition-all duration-700 group-hover:scale-110"
 
 
 
-<h3 className="font-fjalla text-center uppercase text-[8px] sm:text-xs md:text-3xl lg:text-4xl mt-2 md:mt-8 tracking-wider font-bold">
+<h3 className="font-fjalla text-center uppercase text-[10px] sm:text-[11px] md:text-lg lg:text-xl mt-2 md:mt-8 tracking-wider font-bold">
 
 {item.name}
 
@@ -229,36 +227,36 @@ className="object-cover transition-all duration-700 group-hover:scale-110"
 
 
 
-
-
-
+<div style={{ height: "120px" }} />
 
 
 
 {/* PRODUCTS */}
 
 
-<div className="mt-40 px-6 lg:px-20">
+<div className="mt-20 px-6 lg:px-20">
 
 
 
-<div className="flex justify-between items-center mb-16">
+<div className="flex flex-col items-center justify-center mb-16 text-center" style={{ textAlign: "center" }}>
 
 
 
-<h3 className="font-fjalla uppercase text-3xl md:text-6xl">
+<h3 className="font-fjalla uppercase font-bold text-3xl md:text-5xl">
 
 Collection
 
 </h3>
 
 
-
-<p className="uppercase tracking-[0.35em] text-xs text-[#C86B32]">
+<p className="uppercase tracking-[0.35em] text-xs text-[#C86B32] mt-3">
 
 {active}
 
 </p>
+
+<div style={{ height: "60px" }} />
+
 
 
 

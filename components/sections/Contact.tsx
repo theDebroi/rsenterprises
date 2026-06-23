@@ -73,20 +73,22 @@ export default function ContactCTA({ defaultProduct }: ContactCTAProps) {
   };
 
   return (
-    <div id="contact-form" className="w-full bg-[#F5F5F7] text-[#080808] font-['Marcellus',serif] py-16 md:py-28 border-t border-black/10">
+    <div id="contact-form" className="w-full bg-[#F5F5F7] text-[#080808] font-sans py-16 md:py-28 border-t border-black/10">
       <div className="w-full px-6 md:px-8 lg:px-20 grid grid-cols-1 lg:grid-cols-3 gap-10 lg:gap-16 items-start">
         
         {/* Contact Details (Left Column) */}
         <div className="lg:col-span-1 space-y-8 md:space-y-10">
           <div>
-            <h2 className="font-fjalla text-4xl md:text-6xl uppercase leading-none tracking-tight text-[#080808] mb-4 md:mb-6">
+            <h2 className="font-fjalla text-3xl md:text-7xl font-bold uppercase leading-none tracking-tight text-[#080808] mb-4 md:mb-6">
               LET'S CHAT
             </h2>
-            <p className="text-black/55 text-xs md:text-base leading-7 md:leading-8 max-w-sm">
+            <div style={{ height: "30px" }} />
+            <p className="text-black/55 text-xs md:text-base leading-9 md:leading-7 max-w-sm">
               Have custom elastic tape requirements, or a specific webbing tape specification you need manufactured? Fill out the form or reach out directly, and our engineering team will get back to you within 24 hours.
             </p>
           </div>
 
+          <div style={{ height: "50px" }} />
           <div className="space-y-6 pt-10 border-t border-black/10">
             <div className="flex items-start gap-4">
               <div className="w-8 h-8 rounded-none border border-black/10 flex items-center justify-center bg-white text-[#C86B32] shrink-0 mt-0.5 shadow-sm">
@@ -94,9 +96,10 @@ export default function ContactCTA({ defaultProduct }: ContactCTAProps) {
               </div>
               <div>
                 <h3 className="font-bold text-[9px] md:text-[10px] tracking-widest uppercase text-neutral-400 font-sans">Sales Inquiry</h3>
-                <a href="mailto:sales@rstapes.co.in" className="text-xs md:text-sm font-semibold hover:text-[#C86B32] transition duration-300 block mt-1">
+                <a href="mailto:sales@rstapes.co.in" className="text-xs md:text-sm font-semibold hover:text-[#C86B32] transition duration-300 block mt-1 ">
                   sales@rstapes.co.in
                 </a>
+                <div style={{ height: "10px" }} />
               </div>
             </div>
 
@@ -113,8 +116,9 @@ export default function ContactCTA({ defaultProduct }: ContactCTAProps) {
                   +91 74550 44232
                 </a>
               </div>
+              
             </div>
-
+            <div style={{ height: "10px" }} />
             <div className="flex items-start gap-4">
               <div className="w-8 h-8 rounded-none border border-black/10 flex items-center justify-center bg-white text-[#C86B32] shrink-0 mt-0.5 shadow-sm">
                 <MapPin className="w-4 h-4" />
@@ -187,7 +191,7 @@ export default function ContactCTA({ defaultProduct }: ContactCTAProps) {
                       required
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      className="w-full h-[56px] px-5 bg-white border border-black/10 rounded-none text-sm focus:outline-none focus:border-[#C86B32] text-[#080808] font-['Marcellus',serif] transition duration-300 placeholder-neutral-300 focus:shadow-[0_0_15px_rgba(200,107,50,0.05)]"
+                      className="w-full h-[56px] px-5 bg-white border border-black/10 rounded-none text-sm focus:outline-none focus:border-[#C86B32] text-[#080808] font-sans transition duration-300 placeholder-neutral-300 focus:shadow-[0_0_15px_rgba(200,107,50,0.05)]"
                       placeholder="Jane Doe"
                     />
                   </div>
@@ -200,7 +204,7 @@ export default function ContactCTA({ defaultProduct }: ContactCTAProps) {
                       required
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      className="w-full h-[56px] px-5 bg-white border border-black/10 rounded-none text-sm focus:outline-none focus:border-[#C86B32] text-[#080808] font-['Marcellus',serif] transition duration-300 placeholder-neutral-300 focus:shadow-[0_0_15px_rgba(200,107,50,0.05)]"
+                      className="w-full h-[56px] px-5 bg-white border border-black/10 rounded-none text-sm focus:outline-none focus:border-[#C86B32] text-[#080808] font-sans transition duration-300 placeholder-neutral-300 focus:shadow-[0_0_15px_rgba(200,107,50,0.05)]"
                       placeholder="jane@company.com"
                     />
                   </div>
@@ -216,7 +220,7 @@ export default function ContactCTA({ defaultProduct }: ContactCTAProps) {
                       required
                       value={formData.company}
                       onChange={(e) => setFormData({ ...formData, company: e.target.value })}
-                      className="w-full h-[56px] px-5 bg-white border border-black/10 rounded-none text-sm focus:outline-none focus:border-[#C86B32] text-[#080808] font-['Marcellus',serif] transition duration-300 placeholder-neutral-300 focus:shadow-[0_0_15px_rgba(200,107,50,0.05)]"
+                      className="w-full h-[56px] px-5 bg-white border border-black/10 rounded-none text-sm focus:outline-none focus:border-[#C86B32] text-[#080808] font-sans transition duration-300 placeholder-neutral-300 focus:shadow-[0_0_15px_rgba(200,107,50,0.05)]"
                       placeholder="Acme Corp"
                     />
                   </div>
@@ -229,7 +233,7 @@ export default function ContactCTA({ defaultProduct }: ContactCTAProps) {
                         required
                         value={formData.projectScope}
                         onChange={(e) => setFormData({ ...formData, projectScope: e.target.value })}
-                        className="w-full h-[56px] px-5 bg-white border border-black/10 rounded-none text-sm focus:outline-none focus:border-[#C86B32] text-[#080808] font-['Marcellus',serif] transition duration-300 appearance-none cursor-pointer"
+                        className="w-full h-[56px] px-5 bg-white border border-black/10 rounded-none text-sm focus:outline-none focus:border-[#C86B32] text-[#080808] font-sans transition duration-300 appearance-none cursor-pointer"
                       >
                         <option value="">Select Category</option>
                         <option value="elastic-tape">Elastic Tapes (Knitted/Woven)</option>
@@ -256,7 +260,7 @@ export default function ContactCTA({ defaultProduct }: ContactCTAProps) {
                     required
                     value={formData.details}
                     onChange={(e) => setFormData({ ...formData, details: e.target.value })}
-                    className="w-full px-5 py-4 bg-white border border-black/10 rounded-none text-sm focus:outline-none focus:border-[#C86B32] text-[#080808] resize-none font-['Marcellus',serif] transition duration-300 placeholder-neutral-300 focus:shadow-[0_0_15px_rgba(200,107,50,0.05)]"
+                    className="w-full px-5 py-4 bg-white border border-black/10 rounded-none text-sm focus:outline-none focus:border-[#C86B32] text-[#080808] resize-none font-sans transition duration-300 placeholder-neutral-300 focus:shadow-[0_0_15px_rgba(200,107,50,0.05)]"
                     placeholder="Tell us what size, width, stretch coefficient, or raw materials you require..."
                   />
                 </div>

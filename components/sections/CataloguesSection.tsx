@@ -54,7 +54,7 @@ export default function CataloguesSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="font-fjalla text-4xl md:text-6xl uppercase leading-tight mb-6 font-bold text-center"
+            className="font-fjalla text-3xl md:text-5xl uppercase leading-tight mb-6 font-bold text-center"
             style={{ textAlign: "center", width: "100%" }}
           >
             Explore Our Product Catalogues
@@ -72,12 +72,16 @@ export default function CataloguesSection() {
           </motion.p>
         </div>
 
+        <div style={{ height: "60px" }} />
+
         {/* Cards Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-16">
           {catalogues.map((cat, idx) => (
             <CatalogueCard key={idx} {...cat} />
           ))}
         </div>
+
+        <div style={{ height: "60px" }} />
       </div>
     </section>
   );

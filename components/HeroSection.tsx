@@ -21,12 +21,12 @@ import {
 
 
 const FRAME_FOLDER =
-"/Elastic_tape_forms_RS_logo_202606190411_000";
+"/New-Video-RS_frames";
 
 const FRAME_PREFIX =
-"Elastic_tape_forms_RS_logo_202606190411_";
+"frame_";
 
-const TOTAL_FRAMES = 100;
+const TOTAL_FRAMES = 240;
 
 
 export default function HeroSection(){
@@ -88,7 +88,7 @@ new Image();
 
 
 const num =
-String(i).padStart(3,"0");
+String(i + 1).padStart(3,"0");
 
 
 img.src =
@@ -426,7 +426,7 @@ fixed
 inset-0
 z-[99999]
 
-bg-[#080808]
+bg-white
 
 flex
 items-center
@@ -436,48 +436,16 @@ justify-center
 >
 
 
-<div className="text-center">
+<div className="text-center flex flex-col items-center">
 
 
-<h1
-
-className="
-text-white
-
-text-6xl
-
-font-black
-
-tracking-[0.4em]
-"
-
->
-
-R.S
-
-</h1>
-
-
-
-<p
-
-className="
-mt-5
-
-text-neutral-500
-
-tracking-[0.6em]
-
-text-xs
-
-font-bold
-"
-
->
-
-ENTERPRISE
-
-</p>
+<div className="relative w-72 h-72 mb-6 flex items-center justify-center">
+  <img
+    src="/icon.png"
+    alt="R.S. Enterprise Logo"
+    className="max-h-full max-w-full object-contain animate-pulse"
+  />
+</div>
 
 
 
@@ -685,7 +653,7 @@ top-[55%]
 
 -translate-y-1/2
 
-max-w-[430px]
+max-w-[480px]
 "
 
 >
@@ -695,17 +663,17 @@ max-w-[430px]
 <p
 
 className="
-mb-7
+mb-8
 
 uppercase
 
-tracking-[0.35em]
+tracking-[0.45em]
 
-text-[10px]
+text-[11px] md:text-[13px]
 
-font-bold
+font-extrabold
 
-text-neutral-500
+text-[#c86b32]
 "
 
 >
@@ -725,11 +693,11 @@ uppercase
 
 font-black
 
-leading-[0.95]
+leading-[1.05]
 
 tracking-[-0.04em]
 
-mb-7
+mb-8
 "
 
 style={{
@@ -769,13 +737,15 @@ With Precision
 <p
 
 className="
-text-[15px]
+text-[16px] md:text-[18px]
 
 leading-[1.8]
 
-text-neutral-600
+text-neutral-800
 
-mb-10
+font-medium
+
+mb-12
 "
 
 >

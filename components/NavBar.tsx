@@ -155,10 +155,10 @@ group
 
 className="
 relative
-w-[140px]
-h-[45px]
-md:w-[170px]
-md:h-[55px]
+w-[185px]
+h-[60px]
+md:w-[230px]
+md:h-[75px]
 "
 
 >
@@ -169,7 +169,7 @@ src="/icon.png"
 alt="R.S. Enterprise"
 fill
 priority
-sizes="(max-width: 768px) 140px, 170px"
+sizes="(max-width: 768px) 185px, 230px"
 className="object-contain"
 />
 

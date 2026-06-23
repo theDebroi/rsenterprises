@@ -58,10 +58,11 @@ export default function AboutSection() {
             <h1
               className="
                 font-fjalla
-                text-4xl
+                text-5xl
                 md:text-8xl
                 uppercase
                 leading-[1]
+                font-bold
               "
             >
               18 Years Of
@@ -70,7 +71,7 @@ export default function AboutSection() {
               <br />
               Excellence
             </h1>
-
+            <div style={{ height: "50px" }} />
 
             <p className="mt-10 max-w-xl text-lg leading-8 text-black/55">
               Since 2006, R.S Enterprise has been crafting premium
@@ -78,6 +79,8 @@ export default function AboutSection() {
               manufacturing unit to advanced industrial production,
               our journey represents precision, technology and trust.
             </p>
+
+            <div style={{ height: "50px" }} />
 
 
             <Link
