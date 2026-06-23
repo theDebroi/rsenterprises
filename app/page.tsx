@@ -10,6 +10,8 @@ import Navbar from "../components/NavBar";
 import AboutSection from "../components/sections/About";
 import CatalogSection from "../components/sections/Catalogue";
 import QualitySection from "../components/sections/Quality";
+import QualityCertifications from "../components/sections/QualityCertifications";
+import CataloguesSection from "../components/sections/CataloguesSection";
 import ManufacturingSection from "../components/sections/Manufacturing";
 import ContactCTA from "../components/sections/Contact";
 import MapSection from "../components/sections/MapSection";
@@ -97,6 +99,7 @@ bg-[#F5F5F7]
 
 
 
+
 <SectionGap />
 
 
@@ -104,7 +107,17 @@ bg-[#F5F5F7]
 
 
 
+<SectionGap />
 
+
+<QualityCertifications />
+
+
+
+<SectionGap />
+
+
+<CataloguesSection />
 
 
 
