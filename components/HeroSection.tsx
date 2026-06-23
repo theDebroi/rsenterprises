@@ -166,13 +166,14 @@ const resize=()=>{
 const dpr =
 window.devicePixelRatio || 1;
 
+const rect = canvas.getBoundingClientRect();
 
 canvas.width =
-innerWidth*dpr;
+rect.width*dpr;
 
 
 canvas.height =
-innerHeight*dpr;
+rect.height*dpr;
 
 
 
@@ -232,12 +233,15 @@ images.current[index];
 
 if(img){
 
+const dpr = window.devicePixelRatio || 1;
+const w_canvas = canvas.width / dpr;
+const h_canvas = canvas.height / dpr;
 
 ctx.clearRect(
 0,
 0,
-innerWidth,
-innerHeight
+w_canvas,
+h_canvas
 );
 
 
@@ -246,9 +250,9 @@ const scale =
 
 Math.max(
 
-innerWidth/img.width,
+w_canvas/img.width,
 
-innerHeight/img.height
+h_canvas/img.height
 
 )*1.12;
 
@@ -267,9 +271,9 @@ ctx.drawImage(
 
 img,
 
-(innerWidth-w)/2,
+(w_canvas-w)/2,
 
-(innerHeight-h)/2,
+(h_canvas-h)/2,
 
 w,
 
@@ -534,6 +538,7 @@ ref={heroRef}
 className="
 relative
 h-screen
+pt-[128px]
 
 overflow-hidden
 
@@ -584,7 +589,7 @@ backgroundSize:
 {!isMobile && (
   <canvas
     ref={canvasRef}
-    className="absolute inset-0 w-full h-full z-[1]"
+    className="absolute top-[128px] left-0 w-full h-[calc(100%-128px)] z-[1]"
   />
 )}
 
@@ -600,7 +605,10 @@ backgroundSize:
 
 className="
 absolute
-inset-0
+top-[128px]
+left-0
+right-0
+bottom-0
 
 z-[2]
 
@@ -649,7 +657,7 @@ z-10
 
 left-[7vw]
 
-top-[55%]
+top-[60%]
 
 -translate-y-1/2
 
@@ -669,7 +677,7 @@ uppercase
 
 tracking-[0.45em]
 
-text-[11px] md:text-[13px]
+text-[15px] md:text-[18px]
 
 font-extrabold
 
@@ -737,7 +745,7 @@ With Precision
 <p
 
 className="
-text-[16px] md:text-[18px]
+text-[19px] md:text-[22px]
 
 leading-[1.8]
 

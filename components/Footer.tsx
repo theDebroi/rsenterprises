@@ -23,31 +23,29 @@ export default function Footer() {
     <footer className="w-full bg-[#F5F5F7] text-[#080808] px-6 md:px-[6vw] lg:px-[8vw] pt-24 pb-12 overflow-hidden border-t border-black/5">
       <div className="max-w-[1500px] mx-auto">
         
-        {/* TOP: HUGE BRAND TYPOGRAPHY */}
-        <div className="mb-20 space-y-6">
-          <div className="relative w-[180px] h-[55px] md:w-[220px] md:h-[70px]">
+        {/* TOP: BRAND LOGO & COMPACT TEXT */}
+        <div className="mb-14 space-y-4">
+          <div className="relative w-[240px] h-[75px] md:w-[320px] md:h-[100px]">
             <Image
               src="/icon.png"
               alt="R.S. Enterprise Logo"
               fill
-              sizes="(max-width: 768px) 180px, 220px"
+              sizes="(max-width: 768px) 240px, 320px"
               className="object-contain"
             />
           </div>
           <h2
             className="
-              font-fjalla
-              text-[12vw]
-              md:text-[8rem]
-              lg:text-[10rem]
+              font-sans
+              text-xs
+              md:text-sm
+              font-bold
               uppercase
-              leading-[0.8]
-              tracking-[-0.04em]
+              tracking-[0.4em]
+              text-neutral-400
             "
           >
-            R.S
-            <br />
-            ENTERPRISE
+            R.S ENTERPRISE
           </h2>
         </div>
 

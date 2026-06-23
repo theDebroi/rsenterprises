@@ -149,7 +149,7 @@ Products
 {/* CATEGORY */}
 
 
-<div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 px-6 lg:px-20">
+<div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 px-[8vw] lg:px-[12vw] w-full">
 
 
 {categories.map((item,index)=>(
@@ -234,7 +234,7 @@ className="object-cover transition-all duration-700 group-hover:scale-110"
 {/* PRODUCTS */}
 
 
-<div className="mt-20 px-6 lg:px-20">
+<div className="mt-20 px-[8vw] lg:px-[12vw] w-full">
 
 
 

@@ -289,8 +289,8 @@ w-full
 
 bg-[#F5F5F7]
 
-px-8
-lg:px-24
+py-16
+md:py-28
 
 flex
 
@@ -304,6 +304,11 @@ overflow-hidden
 <div
 className="
 w-full
+max-w-[1400px]
+mx-auto
+px-6
+md:px-12
+lg:px-20
 
 grid
 

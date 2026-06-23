@@ -78,116 +78,59 @@ ease:"easeOut"
 }}
 
 
-className={`
-fixed
-
-top-0
-left-0
-
-z-[9999]
-
-w-full
-
-transition-all
-duration-500
 
 
-${
-scrolled
-?
 
-`
-bg-[#f7f3ea]/90
-backdrop-blur-xl
-border-b
-border-black/10
-`
 
-:
 
-`
-bg-transparent
-`
 
-}
-
-`}
-
+  className={`
+    fixed
+    top-4
+    left-4
+    right-4
+    md:top-6
+    md:left-6
+    md:right-6
+    lg:top-8
+    lg:left-8
+    lg:right-8
+    z-[9999]
+    transition-all
+    duration-500
+    rounded-2xl
+    ${
+      scrolled
+        ? `
+          bg-[#f7f3ea]/90
+          backdrop-blur-xl
+          border
+          border-black/10
+          shadow-lg
+        `
+        : `
+          bg-[#f7f3ea]/20
+          backdrop-blur-sm
+          border
+          border-black/5
+        `
+    }
+  `}
 >
-
-
-<div
-
-className="
-
-h-[96px]
-
-px-[7vw]
-
-flex
-
-items-center
-
-justify-between
-
-"
-
->
-
-
-
-
-
-{/* LOGO */}
-
-<a
-
-href="#"
-
-className="
-group
-"
-
->
-
-
-<div
-
-className="
-relative
-w-[185px]
-h-[60px]
-md:w-[230px]
-md:h-[75px]
-"
-
->
-
-
-<Image
-src="/icon.png"
-alt="R.S. Enterprise"
-fill
-priority
-sizes="(max-width: 768px) 185px, 230px"
-className="object-contain"
-/>
-
-
-</div>
-
-
-</a>
-
-
-
-
-
-
-
-
-
-{/* CENTER LINKS */}
+  <div className="h-[96px] px-[5vw] flex items-center justify-between">
+    {/* LOGO */}
+    <a href="#" className="group">
+      <div className="relative w-[210px] h-[68px] md:w-[270px] md:h-[88px]">
+        <Image
+          src="/icon.png"
+          alt="R.S. Enterprise"
+          fill
+          priority
+          sizes="(max-width: 768px) 210px, 270px"
+          className="object-contain"
+        />
+      </div>
+    </a>
 
 
 <nav

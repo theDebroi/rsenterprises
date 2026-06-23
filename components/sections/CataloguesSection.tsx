@@ -31,7 +31,7 @@ export default function CataloguesSection() {
       id="product-catalogues"
       className="relative w-full bg-[#F5F5F7] py-24 text-[#080808] overflow-hidden"
     >
-      <div className="w-full premium-padding-container mx-auto">
+      <div className="w-full premium-padding-container max-w-[1400px] mx-auto">
         {/* Section Header */}
         <div className="w-full flex flex-col items-center justify-center text-center mb-20 mx-auto" style={{ width: "100%", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center" }}>
           <motion.div
