@@ -557,6 +557,7 @@ ref={heroRef}
 className="
 relative
 h-screen
+h-[100dvh]
 overflow-hidden
 bg-white
 "
@@ -663,6 +664,8 @@ className="
 absolute
 z-10
 left-[7vw]
+right-[7vw]
+md:right-auto
 top-0
 bottom-0
 flex
@@ -678,13 +681,13 @@ max-w-[480px]
 <p
 
 className="
-mb-8
+mb-[2.5vh]
 
 uppercase
 
 tracking-[0.45em]
 
-text-[15px] md:text-[18px]
+text-[11px] sm:text-[13px] md:text-[16px] lg:text-[18px]
 
 font-extrabold
 
@@ -712,13 +715,13 @@ leading-[1.05]
 
 tracking-[-0.04em]
 
-mb-8
+mb-[2.5vh]
 "
 
 style={{
 
 fontSize:
-"clamp(2.6rem,4vw,4.8rem)"
+"clamp(1.8rem, 3.8vw, 4.5rem)"
 
 }}
 
@@ -752,15 +755,15 @@ With Precision
 <p
 
 className="
-text-[19px] md:text-[22px]
+text-sm sm:text-base md:text-[18px] lg:text-[22px]
 
-leading-[1.8]
+leading-[1.6]
 
 text-neutral-800
 
 font-medium
 
-mb-12
+mb-[3.5vh]
 "
 
 >
@@ -778,12 +781,13 @@ manufacturing.
 
 
 
+
 {/* BUTTONS */}
 
   <div className="flex items-center gap-3 flex-wrap max-w-full">
     <a
       href="/#contact-form"
-      className="h-[52px] min-w-[145px] px-5 bg-black text-white uppercase text-[10px] tracking-[0.12em] font-bold flex items-center justify-center gap-2 transition hover:-translate-y-1 hover:bg-[#c86b32] duration-300"
+      className="h-[44px] sm:h-[52px] min-w-[130px] sm:min-w-[145px] px-4 sm:px-5 bg-black text-white uppercase text-[9px] sm:text-[10px] tracking-[0.12em] font-bold flex items-center justify-center gap-2 transition hover:-translate-y-1 hover:bg-[#c86b32] duration-300"
     >
       Contact
       <ArrowUpRight size={15} />
@@ -792,7 +796,7 @@ manufacturing.
     <a
       href="/catalogue/company-catalogue.pdf"
       download="company-catalogue.pdf"
-      className="h-[52px] min-w-[145px] px-5 border border-black/20 bg-white/30 backdrop-blur-md uppercase text-[10px] tracking-[0.12em] font-bold flex items-center justify-center gap-2 transition hover:bg-black hover:text-white hover:-translate-y-1 duration-300"
+      className="h-[44px] sm:h-[52px] min-w-[130px] sm:min-w-[145px] px-4 sm:px-5 border border-black/20 bg-white/30 backdrop-blur-md uppercase text-[9px] sm:text-[10px] tracking-[0.12em] font-bold flex items-center justify-center gap-2 transition hover:bg-black hover:text-white hover:-translate-y-1 duration-300"
     >
       Catalogue
       <Download size={14} />
