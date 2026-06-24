@@ -544,6 +544,9 @@ pt-[64px]
 overflow-hidden
 
 bg-white
+
+flex
+items-center
 "
 
 >
@@ -652,20 +655,14 @@ duration:1
 }}
 
 className="
-absolute
+relative
 
 z-10
 
-left-[7vw]
-
-top-[64px]
-bottom-0
-
-flex
-flex-col
-justify-center
+pl-[7vw]
 
 max-w-[480px]
+w-full
 "
 
 >

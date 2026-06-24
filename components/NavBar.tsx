@@ -112,13 +112,13 @@ ease:"easeOut"
   <div className="h-[64px] premium-padding-container flex items-center justify-between">
     {/* LOGO */}
     <a href="#" className="flex items-center gap-3 group">
-      <div className="relative w-[15px] h-[44px] md:w-[100px] md:h-[100px]">
+      <div className="relative w-[44px] h-[44px] md:w-[50px] md:h-[50px]">
         <Image
           src="/icon.png"
           alt="R.S. Enterprise"
           fill
           priority
-          sizes="(max-width: 768px) 150px, 180px"
+          sizes="(max-width: 768px) 44px, 50px"
           className="object-contain"
         />
       </div>
