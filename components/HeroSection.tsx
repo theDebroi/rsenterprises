@@ -443,7 +443,7 @@ justify-center
 <div className="text-center flex flex-col items-center">
 
 
-<div className="relative w-96 h-96 mb-0 flex items-center justify-center">
+<div className="relative w-96 h-50 mb-0 flex items-center justify-center">
   <img
     src="/icon.png"
     alt="R.S. Enterprise Logo"
@@ -460,7 +460,7 @@ mt-2
 
 w-[300px]
 
-h-[6px]
+h-[30px]
 
 bg-white/10
 

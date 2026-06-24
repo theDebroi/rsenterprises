@@ -15,7 +15,7 @@ export default function MapSection() {
       id="map-section"
       className="w-full bg-[#F5F5F7] text-[#080808] py-16 md:py-24 border-t border-black/10 overflow-hidden"
     >
-      <div className="w-full premium-padding-container">
+      <div className="w-full premium-padding-container flex flex-col items-center justify-center">
         {/* Section Header: Centered */}
         <div className="w-full flex flex-col items-center justify-center text-center mb-12 gap-4">
           <p className="text-[#C86B32] tracking-[0.45em] uppercase text-base md:text-lg font-semibold text-center">
@@ -38,8 +38,8 @@ export default function MapSection() {
         <div style={{ height: "40px" }} />
 
         {/* MAP CONTAINER: Centered and Rounded */}
-        <div className="w-full flex justify-center items-center">
-          <div className="relative w-full max-w-[1000px] h-[400px] md:h-[500px] border border-black/15 bg-white shadow-sm overflow-hidden rounded-2xl">
+        <div className="w-full flex justify-center items-center mx-auto">
+          <div className="relative w-full max-w-[1000px] h-[400px] md:h-[500px] border border-black/15 bg-white shadow-sm overflow-hidden rounded-2xl mx-auto">
             <iframe
               src={embedUrl}
               width="100%"
@@ -54,8 +54,8 @@ export default function MapSection() {
         </div>
 
         {/* ADDRESS INFO BAR: Centered */}
-        <div className="w-full flex justify-center items-center mt-8">
-          <div className="w-full max-w-[1000px] grid grid-cols-1 md:grid-cols-2 gap-6 pt-8 border-t border-black/10 text-xs md:text-sm uppercase tracking-[0.15em] font-bold text-neutral-500 font-sans text-center md:text-left">
+        <div className="w-full flex justify-center items-center mt-8 mx-auto">
+          <div className="w-full max-w-[1000px] grid grid-cols-1 md:grid-cols-2 gap-6 pt-8 border-t border-black/10 text-xs md:text-sm uppercase tracking-[0.15em] font-bold text-neutral-500 font-sans text-center mx-auto">
             <div>
               <span className="text-[#C86B32] block mb-1">Corporate Office</span>
               <span className="text-[#080808] normal-case font-semibold">

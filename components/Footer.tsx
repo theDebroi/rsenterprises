@@ -20,7 +20,7 @@ const productLinks = [
 
 export default function Footer() {
   return (
-    <footer className="w-full bg-[#F5F5F7] text-[#080808] px-6 md:px-[6vw] lg:px-[8vw] pt-24 pb-12 overflow-hidden border-t border-black/5">
+    <footer className="w-full bg-[#F5F5F7] text-[#080808] premium-padding-container pt-24 pb-12 overflow-hidden border-t border-black/5">
       <div className="max-w-[1500px] mx-auto">
         
         {/* TOP: BRAND LOGO & COMPACT TEXT */}

@@ -74,7 +74,7 @@ export default function ContactCTA({ defaultProduct }: ContactCTAProps) {
 
   return (
     <div id="contact-form" className="w-full bg-[#F5F5F7] text-[#080808] font-sans py-16 md:py-28 border-t border-black/10">
-      <div className="w-full px-6 md:px-8 lg:px-20 grid grid-cols-1 lg:grid-cols-3 gap-10 lg:gap-16 items-start">
+      <div className="w-full premium-padding-container grid grid-cols-1 lg:grid-cols-3 gap-10 lg:gap-16 items-start">
         
         {/* Contact Details (Left Column) */}
         <div className="lg:col-span-1 space-y-8 md:space-y-10">
