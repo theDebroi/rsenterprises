@@ -658,9 +658,12 @@ z-10
 
 left-[7vw]
 
-top-[60%]
+top-[64px]
+bottom-0
 
--translate-y-1/2
+flex
+flex-col
+justify-center
 
 max-w-[480px]
 "
