@@ -22,6 +22,28 @@ export default function Navbar(){
 
 
 const [scrollPos, setScrollPos] = useState(0);
+const [heroUnpinned, setHeroUnpinned] = useState(false);
+const [isMobile, setIsMobile] = useState(false);
+const [viewportHeight, setViewportHeight] = useState(800);
+
+useEffect(() => {
+  const checkMobile = () => {
+    setIsMobile(window.innerWidth < 768);
+    setViewportHeight(window.innerHeight);
+  };
+  checkMobile();
+  window.addEventListener("resize", checkMobile);
+  return () => window.removeEventListener("resize", checkMobile);
+}, []);
+
+useEffect(() => {
+  const handleHeroUnpinned = (e: Event) => {
+    const customEvent = e as CustomEvent;
+    setHeroUnpinned(customEvent.detail?.unpinned ?? false);
+  };
+  window.addEventListener("hero-unpinned", handleHeroUnpinned);
+  return () => window.removeEventListener("hero-unpinned", handleHeroUnpinned);
+}, []);
 
 useEffect(()=>{
 
@@ -86,9 +108,9 @@ ease:"easeOut"
     z-[99999]
     transition-all
     duration-500
-    ${scrollPos >= 50 && scrollPos < 4400 ? "top-[-80px]" : "top-0"}
+    ${scrollPos >= 50 && !(isMobile ? (scrollPos >= viewportHeight) : heroUnpinned) ? "top-[-80px]" : "top-0"}
     ${
-      scrollPos >= 4400
+      (isMobile ? (scrollPos >= viewportHeight) : heroUnpinned)
         ? `
           bg-[#5b6e58]/95
           backdrop-blur-xl

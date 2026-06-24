@@ -383,6 +383,14 @@ self.progress *
 (TOTAL_FRAMES-1);
 
 
+},
+
+onLeave() {
+  window.dispatchEvent(new CustomEvent("hero-unpinned", { detail: { unpinned: true } }));
+},
+
+onEnterBack() {
+  window.dispatchEvent(new CustomEvent("hero-unpinned", { detail: { unpinned: false } }));
 }
 
 
