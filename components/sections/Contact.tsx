@@ -187,7 +187,7 @@ export default function ContactCTA({ defaultProduct }: ContactCTAProps) {
                       required
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      className="w-full h-[68px] px-6 bg-white border border-black/15 rounded-none text-base focus:outline-none focus:border-[#C86B32] text-[#080808] font-sans transition duration-300 placeholder-neutral-400 focus:shadow-[0_0_15px_rgba(200,107,50,0.05)]"
+                      className="w-full h-[68px] px-6 bg-white border border-black/15 rounded-none text-center text-lg md:text-xl focus:outline-none focus:border-[#C86B32] text-[#080808] font-sans transition duration-300 placeholder-neutral-400 focus:shadow-[0_0_15px_rgba(200,107,50,0.05)]"
                       placeholder="Jane Doe"
                     />
                   </div>
@@ -200,7 +200,7 @@ export default function ContactCTA({ defaultProduct }: ContactCTAProps) {
                       required
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      className="w-full h-[68px] px-6 bg-white border border-black/15 rounded-none text-base focus:outline-none focus:border-[#C86B32] text-[#080808] font-sans transition duration-300 placeholder-neutral-400 focus:shadow-[0_0_15px_rgba(200,107,50,0.05)]"
+                      className="w-full h-[68px] px-6 bg-white border border-black/15 rounded-none text-center text-lg md:text-xl focus:outline-none focus:border-[#C86B32] text-[#080808] font-sans transition duration-300 placeholder-neutral-400 focus:shadow-[0_0_15px_rgba(200,107,50,0.05)]"
                       placeholder="jane@company.com"
                     />
                   </div>
@@ -216,7 +216,7 @@ export default function ContactCTA({ defaultProduct }: ContactCTAProps) {
                       required
                       value={formData.company}
                       onChange={(e) => setFormData({ ...formData, company: e.target.value })}
-                      className="w-full h-[68px] px-6 bg-white border border-black/15 rounded-none text-base focus:outline-none focus:border-[#C86B32] text-[#080808] font-sans transition duration-300 placeholder-neutral-400 focus:shadow-[0_0_15px_rgba(200,107,50,0.05)]"
+                      className="w-full h-[68px] px-6 bg-white border border-black/15 rounded-none text-center text-lg md:text-xl focus:outline-none focus:border-[#C86B32] text-[#080808] font-sans transition duration-300 placeholder-neutral-400 focus:shadow-[0_0_15px_rgba(200,107,50,0.05)]"
                       placeholder="Acme Corp"
                     />
                   </div>
@@ -229,7 +229,7 @@ export default function ContactCTA({ defaultProduct }: ContactCTAProps) {
                         required
                         value={formData.projectScope}
                         onChange={(e) => setFormData({ ...formData, projectScope: e.target.value })}
-                        className="w-full h-[68px] px-6 bg-white border border-black/15 rounded-none text-base focus:outline-none focus:border-[#C86B32] text-[#080808] font-sans transition duration-300 appearance-none cursor-pointer"
+                        className="w-full h-[68px] px-6 bg-white border border-black/15 rounded-none text-center text-lg md:text-xl focus:outline-none focus:border-[#C86B32] text-[#080808] font-sans transition duration-300 appearance-none cursor-pointer"
                       >
                         <option value="">Select Category</option>
                         <option value="elastic-tape">Elastic Tapes (Knitted/Woven)</option>
@@ -256,7 +256,7 @@ export default function ContactCTA({ defaultProduct }: ContactCTAProps) {
                     required
                     value={formData.details}
                     onChange={(e) => setFormData({ ...formData, details: e.target.value })}
-                    className="w-full px-6 py-5 bg-white border border-black/15 rounded-none text-base focus:outline-none focus:border-[#C86B32] text-[#080808] resize-none font-sans transition duration-300 placeholder-neutral-400 focus:shadow-[0_0_15px_rgba(200,107,50,0.05)]"
+                    className="w-full px-6 py-5 bg-white border border-black/15 rounded-none text-center text-lg md:text-xl focus:outline-none focus:border-[#C86B32] text-[#080808] resize-none font-sans transition duration-300 placeholder-neutral-400 focus:shadow-[0_0_15px_rgba(200,107,50,0.05)]"
                     placeholder="Tell us what size, width, stretch coefficient, or raw materials you require..."
                   />
                 </div>
