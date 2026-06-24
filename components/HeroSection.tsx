@@ -539,7 +539,7 @@ ref={heroRef}
 className="
 relative
 h-screen
-pt-[128px]
+pt-[96px]
 
 overflow-hidden
 
@@ -590,7 +590,7 @@ backgroundSize:
 {!isMobile && (
   <canvas
     ref={canvasRef}
-    className="absolute top-[128px] left-0 w-full h-[calc(100%-128px)] z-[1]"
+    className="absolute top-[96px] left-0 w-full h-[calc(100%-96px)] z-[1]"
   />
 )}
 
@@ -606,7 +606,7 @@ backgroundSize:
 
 className="
 absolute
-top-[128px]
+top-[96px]
 left-0
 right-0
 bottom-0

@@ -86,32 +86,25 @@ ease:"easeOut"
 
   className={`
     fixed
-    top-4
-    left-4
-    right-4
-    md:top-6
-    md:left-6
-    md:right-6
-    lg:top-8
-    lg:left-8
-    lg:right-8
+    top-0
+    left-0
+    right-0
     z-[9999]
     transition-all
     duration-500
-    rounded-2xl
     ${
       scrolled
         ? `
           bg-[#f7f3ea]/90
           backdrop-blur-xl
-          border
+          border-b
           border-black/10
           shadow-lg
         `
         : `
           bg-[#f7f3ea]/20
           backdrop-blur-sm
-          border
+          border-b
           border-black/5
         `
     }
