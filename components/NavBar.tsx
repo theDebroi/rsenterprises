@@ -21,18 +21,13 @@ const links = [
 export default function Navbar(){
 
 
-const [scrolled,setScrolled] =
-useState(false);
-
-
+const [scrollPos, setScrollPos] = useState(0);
 
 useEffect(()=>{
 
 const handle=()=>{
 
-setScrolled(
-window.scrollY>40
-);
+setScrollPos(window.scrollY);
 
 };
 
@@ -86,14 +81,14 @@ ease:"easeOut"
 
   className={`
     fixed
-    top-0
     left-0
     right-0
     z-[99999]
     transition-all
     duration-500
+    ${scrollPos >= 50 && scrollPos < 4400 ? "top-[-80px]" : "top-0"}
     ${
-      scrolled
+      scrollPos >= 4400
         ? `
           bg-[#5b6e58]/95
           backdrop-blur-xl
@@ -112,13 +107,13 @@ ease:"easeOut"
   <div className="h-[64px] premium-padding-container flex items-center justify-between">
     {/* LOGO */}
     <a href="#" className="flex items-center gap-3 group">
-      <div className="relative w-[44px] h-[44px] md:w-[50px] md:h-[50px]">
+      <div className="relative w-[15px] h-[44px] md:w-[100px] md:h-[100px]">
         <Image
           src="/icon.png"
           alt="R.S. Enterprise"
           fill
           priority
-          sizes="(max-width: 768px) 44px, 50px"
+          sizes="(max-width: 768px) 150px, 180px"
           className="object-contain"
         />
       </div>

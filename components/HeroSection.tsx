@@ -57,6 +57,8 @@ useState(0);
 
 const [isMobile, setIsMobile] = useState(false);
 
+const [scrollPos, setScrollPos] = useState(0);
+
 useEffect(() => {
   const checkMobile = () => {
     setIsMobile(window.innerWidth < 768);
@@ -64,6 +66,14 @@ useEffect(() => {
   checkMobile();
   window.addEventListener("resize", checkMobile);
   return () => window.removeEventListener("resize", checkMobile);
+}, []);
+
+useEffect(() => {
+  const handleScroll = () => {
+    setScrollPos(window.scrollY);
+  };
+  window.addEventListener("scroll", handleScroll);
+  return () => window.removeEventListener("scroll", handleScroll);
 }, []);
 
 // LOAD IMAGES
@@ -539,14 +549,8 @@ ref={heroRef}
 className="
 relative
 h-screen
-pt-[64px]
-
 overflow-hidden
-
 bg-white
-
-flex
-items-center
 "
 
 >
@@ -593,7 +597,9 @@ backgroundSize:
 {!isMobile && (
   <canvas
     ref={canvasRef}
-    className="absolute top-[64px] left-0 w-full h-[calc(100%-64px)] z-[1]"
+    className={`absolute left-0 w-full transition-all duration-500 z-[1] ${
+      scrollPos < 50 ? "top-[64px] h-[calc(100%-64px)]" : "top-0 h-full"
+    }`}
   />
 )}
 
@@ -607,23 +613,20 @@ backgroundSize:
 
 <div
 
-className="
+className={`
 absolute
-top-[64px]
 left-0
 right-0
 bottom-0
-
 z-[2]
-
 bg-gradient-to-r
-
 from-white/55
-
 via-transparent
-
 to-transparent
-"
+transition-all
+duration-500
+${scrollPos < 50 ? "top-[64px]" : "top-0"}
+`}
 
 />
 
@@ -654,16 +657,19 @@ transition={{
 duration:1
 }}
 
-className="
-relative
-
+className={`
+absolute
 z-10
-
-pl-[7vw]
-
+left-[7vw]
+bottom-0
+flex
+flex-col
+justify-center
 max-w-[480px]
-w-full
-"
+transition-all
+duration-500
+${scrollPos < 50 ? "top-[64px]" : "top-0"}
+`}
 
 >
 
