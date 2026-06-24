@@ -36,7 +36,7 @@ export default function AboutSection() {
               w-full
               aspect-square
               overflow-hidden
-              rounded-[32px]
+              
               shadow-2xl
             "
           >

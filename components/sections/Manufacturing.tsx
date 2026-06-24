@@ -104,7 +104,6 @@ export default function ManufacturingSection() {
             h-[300px]
             md:h-[650px]
             overflow-hidden
-            rounded-3xl
             shadow-lg
           "
         >

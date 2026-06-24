@@ -89,40 +89,42 @@ ease:"easeOut"
     top-0
     left-0
     right-0
-    z-[9999]
+    z-[99999]
     transition-all
     duration-500
     ${
       scrolled
         ? `
-          bg-[#f7f3ea]/90
+          bg-[#5b6e58]/95
           backdrop-blur-xl
           border-b
-          border-black/10
+          border-white/10
           shadow-lg
         `
         : `
-          bg-[#f7f3ea]/20
-          backdrop-blur-sm
+          bg-[#5b6e58]
           border-b
-          border-black/5
+          border-white/5
         `
     }
   `}
 >
-  <div className="h-[96px] px-[5vw] flex items-center justify-between">
+  <div className="h-[64px] premium-padding-container flex items-center justify-between">
     {/* LOGO */}
-    <a href="#" className="group">
-      <div className="relative w-[210px] h-[68px] md:w-[270px] md:h-[88px]">
+    <a href="#" className="flex items-center gap-3 group">
+      <div className="relative w-[150px] h-[44px] md:w-[180px] md:h-[50px]">
         <Image
           src="/icon.png"
           alt="R.S. Enterprise"
           fill
           priority
-          sizes="(max-width: 768px) 210px, 270px"
+          sizes="(max-width: 768px) 150px, 180px"
           className="object-contain"
         />
       </div>
+      <span className="font-sans text-[14px] md:text-[16px] font-black tracking-[0.25em] text-white transition-colors duration-300">
+        RS ENTERPRISES
+      </span>
     </a>
 
 
@@ -135,7 +137,7 @@ lg:flex
 
 items-center
 
-gap-14
+gap-10
 "
 
 >
@@ -158,31 +160,31 @@ relative
 
 uppercase
 
-text-[14px]
+text-[12px]
 
-tracking-[0.28em]
+tracking-[0.25em]
 
 font-bold
 
-text-neutral-600
+text-white/80
 
 
 transition
 
 
-hover:text-[#080808]
+hover:text-white
 
 after:absolute
 
 after:left-0
 
-after:-bottom-2
+after:-bottom-1.5
 
 after:h-[1px]
 
 after:w-0
 
-after:bg-[#c86b32]
+after:bg-white
 
 
 after:transition-all
@@ -228,33 +230,33 @@ md:flex
 items-center
 justify-center
 
-gap-3
+gap-2
 
-h-[56px]
+h-[40px]
 
-min-w-[210px]
+min-w-[160px]
 
-px-12
+px-6
 ml-6
 
 
 border
-border-[#080808]
+border-white
 
 
-bg-[#080808]
+bg-white
 
 
-text-white
+text-[#5b6e58]
 
 
 uppercase
 
-tracking-[0.18em]
+tracking-[0.15em]
 
-text-[12px]
+text-[11px]
 
-font-black
+font-bold
 
 
 transition-all
@@ -264,9 +266,7 @@ duration-500
 
 hover:bg-transparent
 
-hover:text-[#080808]
-
-hover:px-14
+hover:text-white
 "
 
 >
@@ -274,7 +274,7 @@ hover:px-14
 Request Quote
 
 <ArrowUpRight
-size={15}
+size={13}
 />
 
 </a>
@@ -283,53 +283,6 @@ size={15}
 
 
 </div>
-
-
-
-
-
-
-{/* THREAD LINE */}
-
-<motion.div
-
-animate={{
-
-scaleX:[
-0,
-1,
-0
-]
-
-}}
-
-transition={{
-
-duration:5,
-
-repeat:Infinity,
-
-ease:"easeInOut"
-
-}}
-
-className="
-
-origin-left
-
-h-[1px]
-
-bg-gradient-to-r
-
-from-transparent
-
-via-[#c86b32]
-
-to-transparent
-
-"
-
-/>
 
 
 

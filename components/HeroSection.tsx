@@ -443,7 +443,7 @@ justify-center
 <div className="text-center flex flex-col items-center">
 
 
-<div className="relative w-96 h-50 mb-0 flex items-center justify-center">
+<div className="relative w-[450px] h-[200px] mb-0 flex items-center justify-center">
   <img
     src="/icon.png"
     alt="R.S. Enterprise Logo"
@@ -456,11 +456,11 @@ justify-center
 <div
 
 className="
-mt-2
+mt-0
 
 w-[300px]
 
-h-[30px]
+h-[20px]
 
 bg-white/10
 
@@ -496,7 +496,7 @@ bg-[#c86b32]
 <p
 
 className="
-mt-3
+mt-2
 
 text-neutral-400
 
@@ -539,7 +539,7 @@ ref={heroRef}
 className="
 relative
 h-screen
-pt-[96px]
+pt-[64px]
 
 overflow-hidden
 
@@ -590,7 +590,7 @@ backgroundSize:
 {!isMobile && (
   <canvas
     ref={canvasRef}
-    className="absolute top-[96px] left-0 w-full h-[calc(100%-96px)] z-[1]"
+    className="absolute top-[64px] left-0 w-full h-[calc(100%-64px)] z-[1]"
   />
 )}
 
@@ -606,7 +606,7 @@ backgroundSize:
 
 className="
 absolute
-top-[96px]
+top-[64px]
 left-0
 right-0
 bottom-0
