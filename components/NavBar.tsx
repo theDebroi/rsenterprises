@@ -108,22 +108,12 @@ ease:"easeOut"
     z-[99999]
     transition-all
     duration-500
-    ${scrollPos >= 50 && !(isMobile ? (scrollPos >= viewportHeight) : heroUnpinned) ? "top-[-80px]" : "top-0"}
-    ${
-      (isMobile ? (scrollPos >= viewportHeight) : heroUnpinned)
-        ? `
-          bg-[#5b6e58]/95
-          backdrop-blur-xl
-          border-b
-          border-white/10
-          shadow-lg
-        `
-        : `
-          bg-[#5b6e58]
-          border-b
-          border-white/5
-        `
-    }
+    ${(isMobile ? (scrollPos >= viewportHeight) : heroUnpinned) ? "top-0" : "top-[-80px]"}
+    bg-[#5b6e58]/95
+    backdrop-blur-xl
+    border-b
+    border-white/10
+    shadow-lg
   `}
 >
   <div className="h-[64px] premium-padding-container flex items-center justify-between">

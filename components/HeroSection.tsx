@@ -605,9 +605,7 @@ backgroundSize:
 {!isMobile && (
   <canvas
     ref={canvasRef}
-    className={`absolute left-0 w-full transition-all duration-500 z-[1] ${
-      scrollPos < 50 ? "top-[64px] h-[calc(100%-64px)]" : "top-0 h-full"
-    }`}
+    className="absolute top-0 left-0 w-full h-full z-[1]"
   />
 )}
 
@@ -620,9 +618,9 @@ backgroundSize:
 {/* soft overlay */}
 
 <div
-
-className={`
+className="
 absolute
+top-0
 left-0
 right-0
 bottom-0
@@ -631,11 +629,7 @@ bg-gradient-to-r
 from-white/55
 via-transparent
 to-transparent
-transition-all
-duration-500
-${scrollPos < 50 ? "top-[64px]" : "top-0"}
-`}
-
+"
 />
 
 
@@ -665,19 +659,17 @@ transition={{
 duration:1
 }}
 
-className={`
+className="
 absolute
 z-10
 left-[7vw]
+top-0
 bottom-0
 flex
 flex-col
 justify-center
 max-w-[480px]
-transition-all
-duration-500
-${scrollPos < 50 ? "top-[64px]" : "top-0"}
-`}
+"
 
 >
 
