@@ -59,12 +59,12 @@ export default function CompanyTimeline() {
     <section 
       ref={sectionRef} 
       id="timeline" 
-      className="relative bg-[#F5F5F7] text-[#080808] py-32 overflow-hidden border-b border-black/5"
+      className="relative bg-[#F5F5F7] text-[#080808] py-32 premium-padding-container overflow-hidden border-b border-black/5"
     >
-      <div className="premium-padding-container max-w-7xl mx-auto">
+      <div className="w-full flex flex-col items-center">
         
         {/* Header - Centered with spacing */}
-        <div className="text-center mb-32">
+        <div className="w-full text-center mb-32">
           <p className="text-[#C86B32] tracking-[0.4em] uppercase text-xs mb-8 font-bold">
             Our Journey
           </p>
@@ -74,7 +74,7 @@ export default function CompanyTimeline() {
         </div>
 
         {/* Timeline container */}
-        <div className="relative max-w-6xl mx-auto">
+        <div className="relative w-full">
           
           {/* Base Background Line */}
           <div className="absolute left-4 md:left-1/2 -translate-x-1/2 top-0 -bottom-0 w-[2px] bg-black/10" />
