@@ -112,14 +112,6 @@ export default function QualityCertifications() {
         </div>
 
         <div style={{ height: "60px" }} />
-
-        {/* Report Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16 mb-24 w-full">
-          {reports.map((report, idx) => (
-            <CertificationCard key={idx} {...report} />
-          ))}
-        </div>
-
         {/* Bottom Statistics Strip */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -134,7 +126,7 @@ export default function QualityCertifications() {
                 key={idx}
                 className="flex flex-col items-center text-center p-6 bg-white/40 backdrop-blur-sm rounded-xl border border-black/[0.04] transition-all duration-300 hover:bg-white hover:shadow-md"
               >
-                <div className="mb-4 rounded-full bg-[#C86B32]/10 p-3">
+                <div className="mb-4 rounded-full bg-transparent p-3">
                   {stat.icon}
                 </div>
                 <div className="font-fjalla text-3xl md:text-4xl font-bold text-[#111111] mb-2 uppercase">

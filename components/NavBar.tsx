@@ -11,10 +11,13 @@ import { ArrowUpRight } from "lucide-react";
 
 
 const links = [
-  "Manufacturing",
+  "Home",
+  "About Us",
+  "Products",
+  "Infrastructure",
   "Quality",
   "Catalogue",
-  "Contact",
+  "Contact Us",
 ];
 
 

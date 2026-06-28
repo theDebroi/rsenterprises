@@ -6,66 +6,84 @@ import { motion, AnimatePresence } from "framer-motion";
 
 
 const categories = [
-  { name: "Elastic Tape", img: "/Product1.png", key: "elastic" },
+  { name: "Elastic Tape", img: "/product1.png", key: "elastic" },
   { name: "Webbing Tape", img: "/product2.png", key: "webbing" },
   { name: "Shoe Laces", img: "/product3.png", key: "shoelaces" },
+  { name: "Elastic Cords", img: "/product5.png", key: "elasticcords" },
   { name: "Custom Woven Solutions", img: "/product4.png", key: "custom" },
 ];
 
 
 const productData: any = {
 
-elastic:[
-{name:"Binding Elastic Tape",img:"/elastic/binding.png"},
-{name:"Foiled Textured Elastic",img:"/elastic/foiled.png"},
-{name:"Furniture Elastic",img:"/elastic/furniture.png"},
-{name:"HerringBone Elastic",img:"/elastic/herringBone.png"},
-{name:"Multicolored Elastic",img:"/elastic/multicolored.png"},
-{name:"Honeycomb Elastic Tape",img:"/elastic/honeycomb.png"},
-{name:"Lurex Elastic",img:"/elastic/Lurex.png"},
-{name:"Ribbed Elastic",img:"/elastic/ribbed.png"},
-{name:"Sandwich Elastic",img:"/elastic/sandwitch.png"},
-{name:"Laces Elastic",img:"/elastic/laces.png"},
-],
-
-webbing:[
-{name:"Bag Straps",img:"/webbing/bag-staps.png"},
-{name:"Excercise Belt",img:"/webbing/excercise.png"},
-{name:"Binding Niwar",img:"/webbing/niwar.png"},
-{name:"Cotton Tape",img:"/webbing/cotton-tape.png"},
-{name:"Metallic Webbings",img:"/webbing/metallic.png"},
-{name:"Nylon Belts",img:"/webbing/nylon.png"},
-{name:"Parachute Belts",img:"/webbing/parachute.png"},
-{name:"Polyester Webbing Tapes ",img:"/webbing/polyster-webbing.png"},
-{name:"Reflector Tapes",img:"/webbing/reflector.png"},
-{name:"Seat Belts",img:"/webbing/seat-belts.png"},
-],
-
-  shoelaces:[
-    {name:"Round Polyester Laces",img:"/custom/image.png"},
-    {name:"Flat Cotton Laces",img:"/custom/image copy.png"},
-    {name:"Waxed Shoe Laces",img:"/custom/image copy 2.png"},
-    {name:"Athletic Webbed Laces",img:"/custom/image copy 3.png"},
-    {name:"Custom Printed Laces",img:"/custom/image copy 4.png"},
-    {name:"Braided Cord Laces",img:"/custom/image copy 5.png"},
+  elastic:[
+  {name:"Plain Woven Elastic",img:"/custom/image copy 12.png"},
+  {name:"Woven Wider Width Elastic",img:"/custom/image copy 13.png"},
+  {name:"Monofilament Elastic",img:"/custom/image copy 14.png"},
+  {name:"Binding Elastic Tape",img:"/elastic/binding.png"},
+  {name:"Buckle Elastic",img:"/custom/image copy 15.png"},
+  {name:"HerringBone Elastic",img:"/elastic/herringBone.png"},
+  {name:"Honeycomb Elastic Tape",img:"/elastic/honeycomb.png"},
+  {name:"Ribbed Elastic",img:"/elastic/ribbed.png"},
+  {name:"Furniture Elastic",img:"/elastic/furniture.png"},
+  {name:"Multicolored Elastic",img:"/elastic/multicolored.png"},
+  {name:"Lurex Elastic",img:"/elastic/Lurex.png"},
+  {name:"Sandwich Elastic",img:"/elastic/sandwitch.png"},
+  {name:"Double Edge Elastic",img:"/custom/image copy 16.png"},
+  {name:"Woolen Elastic",img:"/custom/image copy 17.png"},
+  {name:"Fur Elastic",img:"/custom/image copy 18.png"},
+  {name:"Foiled Textured Elastic",img:"/elastic/foiled.png"},
+  {name:"Twill Elastic",img:"/custom/image copy 19.png"},
   ],
-
-custom:[
-{name:"Braided Elastic",img:"/custom/image.png"},
-{name:"Buckle Elastic",img:"/custom/image copy.png"},
-{name:"Dog Harness Belts",img:"/custom/image copy 2.png"},
-{name:"Elastic Cords",img:"/custom/image copy 3.png"},
-{name:"Jacquard belts",img:"/custom/image copy 4.png"},
-{name:"Lycra Elastic",img:"/custom/image copy 5.png"},
-{name:"Rainbow Elastic",img:"/custom/image copy 6.png"},
-{name:"Woolen Elastic",img:"/custom/image copy 7.png"},
-{name:"Woven Elastic",img:"/custom/image copy 8.png"},
-{name:"Woven Monofilament Elastic",img:"/custom/image copy 9.png"},
-{name:"Woven Shoulder Straps",img:"/custom/image copy 10.png"},
-{name:"Woven Surgical Elastic",img:"/custom/image copy 11.png"},
-],
-
-};
+  
+  webbing:[
+  {name:"Binding Niwar Tapes",img:"/webbing/niwar.png"},
+  {name:"Cotton Tapes",img:"/webbing/cotton-tape.png"},
+  {name:"Nylon Belts",img:"/webbing/nylon.png"},
+  {name:"Reflector Webbings",img:"/webbing/reflector.png"},
+  {name:"Satin Ribbons",img:"/custom/image copy 20.png"},
+  {name:"Watch Straps",img:"/custom/image copy 21.png"},
+  {name:"Polyester Webbing Tapes",img:"/webbing/polyster-webbing.png"},
+  {name:"Bag Straps",img:"/webbing/bag-staps.png"},
+  {name:"Spun Webbings",img:"/custom/image copy 22.png"},
+  {name:"Recycled Webbing Tapes",img:"/custom/image copy 23.png"},
+  {name:"Lurex Webbings",img:"/webbing/metallic.png"},
+  {name:"Rainbow Multicolor Tapes",img:"/custom/image copy 24.png"},
+  {name:"Printed Tapes",img:"/custom/image copy 25.png"},
+  {name:"Shiny Niwar Tapes",img:"/custom/image copy 26.png"},
+  {name:"Belts",img:"/custom/image copy 27.png"},
+  ],
+  
+  shoelaces:[
+  {name:"Polyester Laces",img:"/custom/image.png"},
+  {name:"Elasticated Laces",img:"/custom/image.png"},
+  {name:"Waxy Laces",img:"/custom/image copy 2.png"},
+  {name:"Round Elastic Laces",img:"/custom/image.png"},
+  {name:"Round Laces",img:"/custom/image.png"},
+  {name:"Flat Laces",img:"/custom/image copy.png"},
+  {name:"Shiny Laces",img:"/custom/image.png"},
+  {name:"Dot Laces",img:"/custom/image.png"},
+  {name:"Organza Laces",img:"/custom/image.png"},
+  {name:"Satin Laces",img:"/custom/image.png"},
+  ],
+  
+  custom:[
+  {name:"Jacquard Tapes",img:"/custom/image copy 4.png"},
+  {name:"Monofilament Elastic",img:"/custom/image copy 9.png"},
+  {name:"Surgical Elastic",img:"/custom/image copy 11.png"},
+  {name:"Exercise Belts",img:"/webbing/excercise.png"},
+  {name:"Designed Elastics",img:"/custom/image.png"},
+  ],
+  
+  elasticcords:[
+  {name:"Round Cords",img:"/custom/image.png"},
+  {name:"Cotton Cords",img:"/custom/image.png"},
+  {name:"Braided Belts",img:"/custom/image.png"},
+  {name:"Flat Braid Elastic",img:"/custom/image.png"},
+  {name:"Dot Elastic",img:"/custom/image.png"},
+  ]
+  
+  };
 
 
 
@@ -134,7 +152,7 @@ Browse our extensive portfolio of elastic tapes, webbing tapes, shoe laces, and 
 {/* CATEGORY */}
 
 
-<div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 w-full px-4 md:px-8">
+<div className="grid grid-cols-2 md:grid-cols-5 gap-4 md:gap-8 w-full px-4 md:px-8">
 
 
 {categories.map((item,index)=>(

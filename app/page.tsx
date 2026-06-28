@@ -16,6 +16,7 @@ import CataloguesSection from "../components/sections/CataloguesSection";
 import ManufacturingSection from "../components/sections/Manufacturing";
 import ContactCTA from "../components/sections/Contact";
 import MapSection from "../components/sections/MapSection";
+import ClientsSection from "@/components/sections/Clients";
 
 import Footer from "../components/Footer";
 
@@ -122,16 +123,15 @@ bg-[#F5F5F7]
 
 <SectionGap />
 
-
-<ManufacturingSection />
-
-
+<ClientsSection />
 
 
 
 
 
 <SectionGap />
+
+
 
 
 <GlobalReach />
