@@ -6,7 +6,7 @@ import { motion, AnimatePresence } from "framer-motion";
 
 
 const categories = [
-  { name: "Elastic Tape", img: "/product1.png", key: "elastic" },
+  { name: "Elastic Tape", img: "/Product1.png", key: "elastic" },
   { name: "Webbing Tape", img: "/product2.png", key: "webbing" },
   { name: "Shoe Laces", img: "/product3.png", key: "shoelaces" },
   { name: "Elastic Cords", img: "/product5.png", key: "elasticcords" },
