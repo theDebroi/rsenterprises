@@ -134,18 +134,6 @@ bg-[#F5F5F7]
 
 
 
-<GlobalReach />
-
-
-
-
-
-
-
-
-<SectionGap />
-
-
 <ContactCTA />
 
 
