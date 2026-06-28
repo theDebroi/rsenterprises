@@ -8,8 +8,8 @@ import { motion, AnimatePresence } from "framer-motion";
 const categories = [
   { name: "Elastic Tape", img: "/Product1.png", key: "elastic" },
   { name: "Webbing Tape", img: "/product2.png", key: "webbing" },
-  { name: "Jacquard Elastic", img: "/product3.png", key: "jacquard" },
-  { name: "Custom Solutions", img: "/product4.png", key: "custom" },
+  { name: "Shoe Laces", img: "/product3.png", key: "shoelaces" },
+  { name: "Custom Woven Solutions", img: "/product4.png", key: "custom" },
 ];
 
 
@@ -41,19 +41,13 @@ webbing:[
 {name:"Seat Belts",img:"/webbing/seat-belts.png"},
 ],
 
-  jacquard:[
-    {name:"Braided Elastic",img:"/custom/image.png"},
-    {name:"Buckle Elastic",img:"/custom/image copy.png"},
-    {name:"Dog Harness Belts",img:"/custom/image copy 2.png"},
-    {name:"Elastic Cords",img:"/custom/image copy 3.png"},
-    {name:"Jacquard belts",img:"/custom/image copy 4.png"},
-    {name:"Lycra Elastic",img:"/custom/image copy 5.png"},
-    {name:"Rainbow Elastic",img:"/custom/image copy 6.png"},
-    {name:"Woolen Elastic",img:"/custom/image copy 7.png"},
-    {name:"Woven Elastic",img:"/custom/image copy 8.png"},
-    {name:"Woven Monofilament Elastic",img:"/custom/image copy 9.png"},
-    {name:"Woven Shoulder Straps",img:"/custom/image copy 10.png"},
-    {name:"Woven Surgical Elastic",img:"/custom/image copy 11.png"},
+  shoelaces:[
+    {name:"Round Polyester Laces",img:"/custom/image.png"},
+    {name:"Flat Cotton Laces",img:"/custom/image copy.png"},
+    {name:"Waxed Shoe Laces",img:"/custom/image copy 2.png"},
+    {name:"Athletic Webbed Laces",img:"/custom/image copy 3.png"},
+    {name:"Custom Printed Laces",img:"/custom/image copy 4.png"},
+    {name:"Braided Cord Laces",img:"/custom/image copy 5.png"},
   ],
 
 custom:[
@@ -119,25 +113,15 @@ className="w-full bg-[#F5F5F7] text-[#080808] py-20 premium-padding-container ov
 {/* HEADER */}
 
 
-<div className="text-center mb-24">
-
-
-<p className="text-[#C86B32] tracking-[0.45em] uppercase text-xs mb-6">
-
-Our Catalogue
-
-</p>
-
-
+<div className="text-center mb-20">
 
 <h2 className="font-fjalla font-bold text-3xl md:text-6xl uppercase leading-none">
-
-Engineered
-<br />
-Products
-
+Our Product Range
 </h2>
 
+<p className="mt-6 text-base md:text-lg text-black/55 max-w-2xl mx-auto tracking-wide">
+Browse our extensive portfolio of elastic tapes, webbing tapes, shoe laces, and specialty woven products.
+</p>
 
 </div>
 

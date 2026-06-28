@@ -768,9 +768,8 @@ mb-[3.5vh]
 
 >
 
-Premium elastic tapes and webbing
-solutions engineered with precision
-manufacturing.
+Premium elastic tapes, webbing tapes and shoe laces
+manufactured for industries worldwide.
 
 </p>
 

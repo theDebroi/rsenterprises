@@ -96,9 +96,9 @@ export default function AboutSection() {
                 font-bold
               "
             >
-              18 Years Of
+              20 Years of
               <br />
-              Textile
+              Manufacturing
               <br />
               Excellence
             </h1>
@@ -113,10 +113,7 @@ export default function AboutSection() {
                 text-black/55
               "
             >
-              Since 2006, R.S Enterprise has been crafting premium elastic tapes
-              and woven webbing solutions. From a small manufacturing unit to
-              advanced industrial production, our journey represents precision,
-              technology and trust.
+              What began as a small manufacturing unit has evolved into a production facility specializing in premium narrow woven products. Every product reflects our commitment to quality, reliability, and precision manufacturing.
             </p>
             <div style={{ height: "40px" }} />
 

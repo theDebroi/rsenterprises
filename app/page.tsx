@@ -8,6 +8,7 @@ import SmoothScroll from "../components/SmoothScroll";
 import Navbar from "../components/NavBar";
 
 import AboutSection from "../components/sections/About";
+import CompanyTimeline from "../components/sections/Timeline";
 import CatalogSection from "../components/sections/Catalogue";
 import QualitySection from "../components/sections/Quality";
 import QualityCertifications from "../components/sections/QualityCertifications";
@@ -86,7 +87,10 @@ bg-[#F5F5F7]
 
 
 
+<SectionGap />
 
+
+<CompanyTimeline />
 
 
 <SectionGap />
