@@ -8,8 +8,7 @@ import { ArrowUpRight } from "lucide-react";
 const links = [
   { label: "Home", id: "home" },
   { label: "About Us", id: "about" },
-  { label: "Products", id: "catalogue" },
-  { label: "Infrastructure", id: "infrastructure" },
+  { label: "Products", id: "product-catalogues" },
   { label: "Quality", id: "quality" },
   { label: "Catalogue", id: "catalogue" },
   { label: "Contact Us", id: "contact-form" },
