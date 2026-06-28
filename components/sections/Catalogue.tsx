@@ -45,7 +45,7 @@ const productData: any = {
   {name:"Watch Straps",img:"/custom/image copy 21.png"},
   {name:"Polyester Webbing Tapes",img:"/webbing/polyster-webbing.png"},
   {name:"Bag Straps",img:"/webbing/bag-staps.png"},
-  {name:"Spun Webbings",img:"/custom/image copy 24.png"},
+  {name:"Spun Webbings",img:"/custom/image copy 23.png"},
   {name:"Recycled Webbing Tapes",img:"/custom/recycled.png"},
   {name:"Lurex Webbings",img:"/webbing/metallic.png"},
   {name:"Rainbow Multicolor Tapes",img:"/custom/image copy 23.png"},
