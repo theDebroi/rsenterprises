@@ -43,22 +43,41 @@ export default function ContactCTA({ defaultProduct }: ContactCTAProps) {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+  
     const categoryLabel = {
       "elastic-tape": "Elastic Tapes (Knitted/Woven)",
       "webbing-tape": "Webbing Tapes & Straps",
       "jacquard-elastic": "Jacquard Elastics",
       "custom-solutions": "Custom Solutions / OEM",
-      "other": "Other / General Inquiry"
+      "other": "Other / General Inquiry",
     }[formData.projectScope] || formData.projectScope || "General Inquiry";
-
-    const msg = `Hello R.S Enterprise,\n\nI have submitted an inquiry via your website. Here are my details:\n\n*Name:* ${formData.name}\n*Email:* ${formData.email}\n*Company:* ${formData.company}\n*Category:* ${categoryLabel}\n*Requirements:* ${formData.details}`;
-    const waUrl = `https://wa.me/917455044231?text=${encodeURIComponent(msg)}`;
-
+  
+    const subject = "Inquiry from the Website";
+  
+    const body = `Hello R.S Enterprise,
+  
+  I have submitted an inquiry through your website.
+  
+  Name: ${formData.name}
+  Email: ${formData.email}
+  Company: ${formData.company}
+  Category: ${categoryLabel}
+  
+  Requirements:
+  ${formData.details}
+  
+  Regards,
+  ${formData.name}
+  `;
+  
+    const mailtoUrl = `mailto:sales@rstapes.co.in?subject=${encodeURIComponent(
+      subject
+    )}&body=${encodeURIComponent(body)}`;
+  
     if (typeof window !== "undefined") {
-      window.open(waUrl, "_blank");
+      window.location.href = mailtoUrl;
     }
-    
+  
     setTimeout(() => {
       setIsSubmitting(false);
       setIsSuccess(true);
@@ -80,7 +99,7 @@ export default function ContactCTA({ defaultProduct }: ContactCTAProps) {
         <div className="lg:col-span-1 space-y-10 md:space-y-12">
           <div>
             <h2 className="font-fjalla text-4xl md:text-4xl font-black uppercase leading-none tracking-tight text-[#080808] mb-6">
-              LET'S CHAT
+             SEND REQUIREMENT 
             </h2>
             <div style={{ height: "10px" }} />
           </div>
@@ -179,7 +198,7 @@ export default function ContactCTA({ defaultProduct }: ContactCTAProps) {
               >
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                   <div>
-                    <label className="block text-[12px] uppercase tracking-[0.2em] font-black text-neutral-500 mb-3 font-sans">
+                    <label className="block text-[22px] uppercase tracking-[0.2em] font-black text-neutral-500 mb-3 font-sans">
                       Your Name
                     </label>
                     <input
@@ -192,7 +211,7 @@ export default function ContactCTA({ defaultProduct }: ContactCTAProps) {
                     />
                   </div>
                   <div>
-                    <label className="block text-[12px] uppercase tracking-[0.2em] font-black text-neutral-500 mb-3 font-sans">
+                    <label className="block text-[22px] uppercase tracking-[0.2em] font-black text-neutral-500 mb-3 font-sans">
                       Corporate Email
                     </label>
                     <input
@@ -208,7 +227,7 @@ export default function ContactCTA({ defaultProduct }: ContactCTAProps) {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                   <div>
-                    <label className="block text-[12px] uppercase tracking-[0.2em] font-black text-neutral-500 mb-3 font-sans">
+                    <label className="block text-[22px] uppercase tracking-[0.2em] font-black text-neutral-500 mb-3 font-sans">
                       Company Name
                     </label>
                     <input
@@ -221,7 +240,7 @@ export default function ContactCTA({ defaultProduct }: ContactCTAProps) {
                     />
                   </div>
                   <div>
-                    <label className="block text-[12px] uppercase tracking-[0.2em] font-black text-neutral-500 mb-3 font-sans">
+                    <label className="block text-[22px] uppercase tracking-[0.2em] font-black text-neutral-500 mb-3 font-sans">
                       Inquiry Category
                     </label>
                     <div className="relative">
@@ -248,7 +267,7 @@ export default function ContactCTA({ defaultProduct }: ContactCTAProps) {
                 </div>
 
                 <div>
-                  <label className="block text-[12px] uppercase tracking-[0.2em] font-black text-neutral-500 mb-3 font-sans">
+                  <label className="block text-[22px] uppercase tracking-[0.2em] font-black text-neutral-500 mb-3 font-sans">
                     Requirements Details
                   </label>
                   <textarea
